@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnywta3trmhm"]
+
+[ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://dx2oog2jjeofw" path="res://scripts/sonaglio_osc_receiver.gd" id="2_sugp2"]
+[ext_resource type="Environment" uid="uid://ctl3uwkad6pnb" path="res://assets/world_environment.tres" id="2_tbgi4"]
+[ext_resource type="Script" uid="uid://bfd5ad2y1xwdh" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_jyhfs"]
+[ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="3_tefeu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5qli"]
+shadow_to_opacity = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0wfyh"]
+material = SubResource("StandardMaterial3D_o5qli")
+size = Vector2(100, 100)
+center_offset = Vector3(0, -2, 0)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_jyhfs")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_tbgi4")
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="CenterContainer" type="CenterContainer" parent="MainMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckButton" type="CheckButton" parent="MainMenu/CenterContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "INTERACTING"
+
+[node name="Labels" type="Control" parent="MainMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HistoryLabel" type="Label" parent="MainMenu/Labels"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 206.0
+offset_right = 472.0
+offset_bottom = 272.0
+theme = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 56
+text = "Storia"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="AnalysisLabel" type="Label" parent="MainMenu/Labels"]
+layout_mode = 0
+offset_left = 1446.0
+offset_top = 211.0
+offset_right = 1653.0
+offset_bottom = 277.0
+theme = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 56
+text = "Analisi"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TechnologyLabel" type="Label" parent="MainMenu/Labels"]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 887.0
+offset_right = 1129.0
+offset_bottom = 953.0
+theme = ExtResource("3_tefeu")
+theme_override_font_sizes/font_size = 56
+text = "Tecnologia"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="SceneRoot" type="Node3D" parent="."]
+
+[node name="Sonaglio" type="Node3D" parent="SceneRoot"]
+
+[node name="Model" parent="SceneRoot/Sonaglio" instance=ExtResource("1_o5qli")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.9, 0)
+
+[node name="OSCReceiver" type="Node" parent="SceneRoot/Sonaglio" node_paths=PackedStringArray("target_server")]
+script = ExtResource("2_sugp2")
+target_server = NodePath("../../OSCServer")
+osc_address = "/quaternion"
+metadata/_custom_type_script = "uid://b4euyqc6jm12e"
+
+[node name="Camera3D" type="Camera3D" parent="SceneRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="ShadowCatcher" type="MeshInstance3D" parent="SceneRoot"]
+mesh = SubResource("PlaneMesh_0wfyh")
+skeleton = NodePath("../..")
+
+[node name="MainLight" type="SpotLight3D" parent="SceneRoot"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 4, 3)
+light_energy = 10.0
+light_size = 2.0
+shadow_enabled = true
+shadow_blur = 10.0
+spot_range = 20.0
+
+[node name="BackLight" type="SpotLight3D" parent="SceneRoot"]
+transform = Transform3D(-1, 4.37114e-08, -7.57103e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 3, -8)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 20.0
+
+[node name="OSCServer" type="Node" parent="SceneRoot"]
+script = ExtResource("3_jyhfs")
+metadata/_custom_type_script = "uid://bfd5ad2y1xwdh"

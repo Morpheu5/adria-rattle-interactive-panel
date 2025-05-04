@@ -1,0 +1,7 @@
+[gd_resource type="Environment" format=3 uid="uid://ctl3uwkad6pnb"]
+
+[resource]
+background_mode = 1
+background_color = Color(0.1005, 0.051, 0.15, 1)
+background_canvas_max_layer = -100
+ambient_light_energy = 16.0
