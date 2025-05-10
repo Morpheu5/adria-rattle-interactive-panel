@@ -22,22 +22,6 @@ script = ExtResource("1_jyhfs")
 environment = ExtResource("2_tbgi4")
 
 [node name="MainMenu" type="CanvasLayer" parent="."]
-layer = -100
-
-[node name="CenterContainer" type="CenterContainer" parent="MainMenu"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="CheckButton" type="CheckButton" parent="MainMenu/CenterContainer"]
-visible = false
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "INTERACTING"
 
 [node name="Labels" type="Control" parent="MainMenu"]
 layout_mode = 3
@@ -47,7 +31,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HistoryLabel" type="Label" parent="MainMenu/Labels"]
+[node name="History" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
 offset_left = 281.0
 offset_top = 206.0
@@ -55,12 +39,12 @@ offset_right = 472.0
 offset_bottom = 272.0
 theme = ExtResource("3_tefeu")
 theme_override_font_sizes/font_size = 56
-text = "Storia"
+text = "storia"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="AnalysisLabel" type="Label" parent="MainMenu/Labels"]
+[node name="Analysis" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
 offset_left = 1446.0
 offset_top = 211.0
@@ -68,12 +52,12 @@ offset_right = 1653.0
 offset_bottom = 277.0
 theme = ExtResource("3_tefeu")
 theme_override_font_sizes/font_size = 56
-text = "Analisi"
+text = "analisi"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="TechnologyLabel" type="Label" parent="MainMenu/Labels"]
+[node name="Technology" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
 offset_left = 791.0
 offset_top = 887.0
@@ -81,7 +65,7 @@ offset_right = 1129.0
 offset_bottom = 953.0
 theme = ExtResource("3_tefeu")
 theme_override_font_sizes/font_size = 56
-text = "Tecnologia"
+text = "tecnologia"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true

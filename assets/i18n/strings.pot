@@ -1,0 +1,38 @@
+# LANGUAGE translation for Sonaglio di Adria (pannello interattivo) for the following files:
+# res://scenes/InfoScreen.tscn
+# res://scenes/main.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sonaglio di Adria (pannello interattivo)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"X-Source-Language: it\n"
+
+#: scenes/InfoScreen.tscn
+msgid "TITLE"
+msgstr ""
+
+#: scenes/InfoScreen.tscn
+msgid "TAB"
+msgstr ""
+
+#: scenes/InfoScreen.tscn
+msgid "[b]Lorem ipsum dolor[/b] sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+msgstr ""
+
+#: scenes/main.tscn
+msgid "storia"
+msgstr ""
+
+#: scenes/main.tscn
+msgid "analisi"
+msgstr ""
+
+#: scenes/main.tscn
+msgid "tecnologia"
+msgstr ""
