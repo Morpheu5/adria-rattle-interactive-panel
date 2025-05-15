@@ -32,6 +32,7 @@ func _input(event: InputEvent) -> void:
 		current_info_screen.title = labels[i].text
 		current_info_screen.dismiss.connect(_on_info_screen_dismiss)
 		current_info_screen.modulate = Color(1.0, 1.0, 1.0, 0.0)
+		current_info_screen.filename = labels[i].filename
 		$MainMenu.add_child(current_info_screen)
 		create_tween().tween_property(current_info_screen, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 		interactable = false

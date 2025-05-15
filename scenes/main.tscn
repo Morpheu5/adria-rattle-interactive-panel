@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=10 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
@@ -6,6 +6,7 @@
 [ext_resource type="Environment" uid="uid://ctl3uwkad6pnb" path="res://assets/world_environment.tres" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://bfd5ad2y1xwdh" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_jyhfs"]
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://df1vhc5k8uo2o" path="res://scenes/main_menu_label.gd" id="4_o6xl0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5qli"]
 shadow_to_opacity = true
@@ -43,6 +44,8 @@ text = "storia"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "history"
 
 [node name="Analysis" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
@@ -56,6 +59,8 @@ text = "analisi"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "analysis"
 
 [node name="Technology" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
@@ -69,6 +74,8 @@ text = "tecnologia"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "technology"
 
 [node name="SceneRoot" type="Node3D" parent="."]
 

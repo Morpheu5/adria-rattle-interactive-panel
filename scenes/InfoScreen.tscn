@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="1_i6bd7"]
 [ext_resource type="Script" uid="uid://0dbsepctgee6" path="res://scenes/info_screen.gd" id="1_wf64k"]
-[ext_resource type="FontFile" uid="uid://dsl7nmsnbjlxn" path="res://assets/Roboto-VariableFont_wdth,wght.ttf" id="2_tq21o"]
 [ext_resource type="Shader" uid="uid://tm7dmklubvno" path="res://scenes/blur_shader.gdshader" id="2_uvk3b"]
 [ext_resource type="Texture2D" uid="uid://dc2mlc80scfp3" path="res://assets/ui/arrowLeft.png" id="4_e6a6a"]
+[ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="5_e6a6a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e6a6a"]
 shader = ExtResource("2_uvk3b")
@@ -47,10 +47,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 60
-theme_override_constants/margin_bottom = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
 layout_mode = 2
@@ -68,7 +64,7 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_i6bd7")
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 48
 text = "TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -79,31 +75,44 @@ theme = ExtResource("1_i6bd7")
 text = "    "
 flat = true
 
-[node name="Tabs" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="ColorRect/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/Tabs"]
-layout_mode = 2
-theme = ExtResource("1_i6bd7")
-theme_override_font_sizes/font_size = 48
-text = "TAB"
-flat = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_i6bd7")
-theme_override_fonts/normal_font = ExtResource("2_tq21o")
-theme_override_fonts/mono_font = ExtResource("2_tq21o")
-theme_override_fonts/italics_font = ExtResource("2_tq21o")
-theme_override_fonts/bold_italics_font = ExtResource("2_tq21o")
-theme_override_fonts/bold_font = ExtResource("2_tq21o")
-theme_override_font_sizes/bold_italics_font_size = 32
-theme_override_font_sizes/italics_font_size = 32
-theme_override_font_sizes/mono_font_size = 32
-theme_override_font_sizes/normal_font_size = 32
-theme_override_font_sizes/bold_font_size = 32
-bbcode_enabled = true
-text = "[b]Lorem ipsum dolor[/b] sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+current_tab = 0
+
+[node name="TabBar" type="TabBar" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+tab_alignment = 1
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Lorem ipsum dolor
+"
+fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_e6a6a")
+expand_mode = 4
+stretch_mode = 4
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/TitleBar/BackButton" to="." method="_on_back_button_pressed"]
