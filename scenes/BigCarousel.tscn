@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://fjtvl4gxw6sd"]
+[gd_scene load_steps=10 format=3 uid="uid://fjtvl4gxw6sd"]
 
 [ext_resource type="Script" uid="uid://d0r0fpftlfun1" path="res://scenes/big_carousel.gd" id="1_wamd2"]
 [ext_resource type="Texture2D" uid="uid://u4x6c264rr10" path="res://assets/ui/left.png" id="2_igyu6"]
 [ext_resource type="Texture2D" uid="uid://c7xwi5pj2rgpl" path="res://assets/ui/right.png" id="3_7mt3l"]
 [ext_resource type="Texture2D" uid="uid://ru0ce2lwv0mj" path="res://assets/content/images/b.jpg" id="3_daq26"]
 [ext_resource type="Texture2D" uid="uid://cpwly600w7mpr" path="res://assets/ui/cross.png" id="4_daq26"]
+[ext_resource type="Texture2D" uid="uid://dq1hxm1hbdv8c" path="res://assets/content/images/b_thumb.jpg" id="6_omqxi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0431n"]
 content_margin_left = 64.0
@@ -90,6 +91,17 @@ custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 
 [node name="ThumbsContainer" type="HBoxContainer" parent="BackgroundPanel/VBoxContainer/ThumbsScroller"]
+clip_contents = true
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundPanel/VBoxContainer/ThumbsScroller/ThumbsContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("6_omqxi")
+expand_mode = 3
 
 [connection signal="pressed" from="BackgroundPanel/VBoxContainer/GalleryContainer/RightButtons/CloseButton" to="." method="_on_close_button_pressed"]

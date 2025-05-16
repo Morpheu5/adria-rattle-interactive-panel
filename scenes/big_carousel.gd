@@ -5,14 +5,19 @@ var image_idx: int
 var image_name: String
 var thumbs: Array
 
-var image: TextureRect
-
 func _ready() -> void:
-	image = $BackgroundPanel/VBoxContainer/GalleryContainer/Image
+	var image: TextureRect = $BackgroundPanel/VBoxContainer/GalleryContainer/Image
+	var thumbs_container: HBoxContainer = $BackgroundPanel/VBoxContainer/ThumbsScroller/ThumbsContainer
+	
 	image.texture = load(image_name)
 	image.expand_mode = TextureRect.EXPAND_FIT_WIDTH
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	pass
+	for k in range(thumbs.size()):
+		var thumb = load(thumbs[k])
+		var thumb_rect = TextureRect.new()
+		thumb_rect.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+		thumb_rect.texture = thumb
+		thumbs_container.add_child(thumb_rect)
 
 
 func _on_close_button_pressed() -> void:
