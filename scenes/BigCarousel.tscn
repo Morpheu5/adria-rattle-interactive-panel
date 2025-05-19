@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fjtvl4gxw6sd"]
+[gd_scene load_steps=11 format=3 uid="uid://fjtvl4gxw6sd"]
 
 [ext_resource type="Script" uid="uid://d0r0fpftlfun1" path="res://scenes/big_carousel.gd" id="1_wamd2"]
 [ext_resource type="Texture2D" uid="uid://u4x6c264rr10" path="res://assets/ui/left.png" id="2_igyu6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ru0ce2lwv0mj" path="res://assets/content/images/b.jpg" id="3_daq26"]
 [ext_resource type="Texture2D" uid="uid://cpwly600w7mpr" path="res://assets/ui/cross.png" id="4_daq26"]
 [ext_resource type="Texture2D" uid="uid://dq1hxm1hbdv8c" path="res://assets/content/images/b_thumb.jpg" id="6_omqxi"]
+[ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="6_pm5jp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0431n"]
 content_margin_left = 64.0
@@ -85,6 +86,15 @@ size_flags_vertical = 3
 theme_override_constants/icon_max_width = 64
 icon = ExtResource("3_7mt3l")
 flat = true
+
+[node name="Caption" type="Label" parent="BackgroundPanel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_pm5jp")
+theme_override_font_sizes/font_size = 32
+text = "TESTING
+testing"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ThumbsScroller" type="ScrollContainer" parent="BackgroundPanel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 128)

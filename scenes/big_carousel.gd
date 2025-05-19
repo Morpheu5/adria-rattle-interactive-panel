@@ -3,8 +3,10 @@ class_name BigCarousel
 
 var image_idx: int
 var image_name: String
+var caption: String
 var thumbs: Array
 var images: Array
+var captions: Array
 
 func _ready() -> void:
 	var thumbs_container: HBoxContainer = $BackgroundPanel/VBoxContainer/ThumbsScroller/ThumbsContainer
@@ -28,9 +30,11 @@ func _on_thumb_pressed(event, k):
 
 func load_big_picture(image_name: String):
 	var image: TextureRect = $BackgroundPanel/VBoxContainer/GalleryContainer/Image
+	var caption: Label = $BackgroundPanel/VBoxContainer/Caption
 	image.texture = load(image_name)
 	image.expand_mode = TextureRect.EXPAND_FIT_WIDTH
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	caption.text = captions[image_idx]
 
 func _on_close_button_pressed() -> void:
 	queue_free()
@@ -39,10 +43,12 @@ func _on_close_button_pressed() -> void:
 func _on_right_button_pressed() -> void:
 	image_idx = (image_idx + 1) % thumbs.size()
 	image_name = thumbs[image_idx]
+	caption = captions[image_idx]
 	load_big_picture(image_name)
 
 
 func _on_left_button_pressed() -> void:
 	image_idx = (image_idx - 1) % thumbs.size()
 	image_name = thumbs[image_idx]
+	caption = captions[image_idx]
 	load_big_picture(image_name)
