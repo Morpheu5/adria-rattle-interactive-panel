@@ -36,6 +36,7 @@ func load_big_picture(image_name: String):
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	caption.text = captions[image_idx]
 
+
 func _on_close_button_pressed() -> void:
 	queue_free()
 
