@@ -15,7 +15,15 @@ func _ready() -> void:
 		var thumb_rect = TextureRect.new()
 		thumb_rect.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
 		thumb_rect.texture = thumb
+		thumb_rect.connect("gui_input", _on_thumb_pressed.bind(k))
 		thumbs_container.add_child(thumb_rect)
+
+
+func _on_thumb_pressed(event, k):
+	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()) or (event is InputEventScreenTouch and event.is_released()):
+		image_idx = k
+		image_name = images[k]
+		load_big_picture(image_name)
 
 
 func load_big_picture(image_name: String):
