@@ -104,4 +104,6 @@ layout_mode = 2
 texture = ExtResource("6_omqxi")
 expand_mode = 3
 
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/GalleryContainer/LeftButtons/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="BackgroundPanel/VBoxContainer/GalleryContainer/RightButtons/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/VBoxContainer/GalleryContainer/RightButtons/RightButton" to="." method="_on_right_button_pressed"]

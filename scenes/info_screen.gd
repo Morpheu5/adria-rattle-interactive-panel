@@ -74,7 +74,7 @@ func _configure_info_screen(data: Variant):
 					for k in range(content_block["content"].size()):
 						var image = TextureRect.new()
 						image.texture = load(content_block["content"][k]["thumbnail"])
-						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"][k]["content"], content_block["content"].map(func(c): return c["thumbnail"] )))
+						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"])))
 						carousel.add_child(image)
 			var spacer = Control.new()
 			spacer.custom_minimum_size = Vector2(0, 32)
@@ -83,10 +83,10 @@ func _configure_info_screen(data: Variant):
 func _on_back_button_pressed() -> void:
 	emit_signal("dismiss")
 
-func _on_image_pressed(event: InputEvent, image_idx: int, image_name: String, thumbs: Array) -> void:
+func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images: Array) -> void:
 	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()) or (event is InputEventScreenTouch and event.is_released()):
 		var c = big_carousel.instantiate()
 		c.image_idx = image_idx
-		c.image_name = image_name
 		c.thumbs = thumbs
+		c.images = images
 		add_child(c)
