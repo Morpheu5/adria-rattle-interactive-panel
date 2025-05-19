@@ -172,7 +172,6 @@ content_margin_right = 10.0
 content_margin_bottom = 4.0
 bg_color = Color(0.1, 0.1, 0.1, 0.6)
 border_width_top = 2
-border_color = Color(1, 1, 1, 0.75)
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_su3rx"]
@@ -183,8 +182,6 @@ content_margin_bottom = 4.0
 bg_color = Color(0, 0, 0, 0.6)
 border_width_left = 1
 border_width_right = 1
-border_color = Color(0.175, 0.175, 0.175, 1)
-corner_detail = 1
 
 [sub_resource type="Image" id="Image_x2hgr"]
 data = {
@@ -302,7 +299,8 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-corner_detail = 1
+expand_margin_left = 8.0
+expand_margin_right = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44o6q"]
 content_margin_left = 20.0
@@ -310,14 +308,11 @@ content_margin_top = 8.0
 content_margin_right = 20.0
 content_margin_bottom = 8.0
 bg_color = Color(0, 0, 0, 0.6)
-border_width_left = 12
-border_width_right = 12
 border_color = Color(0.175, 0.175, 0.175, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-corner_detail = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvko6"]
 
@@ -429,7 +424,7 @@ TabBar/colors/font_hovered_color = Color(0.95, 0.95, 0.95, 1)
 TabBar/colors/font_outline_color = Color(0, 0, 0, 1)
 TabBar/colors/font_selected_color = Color(0.95, 0.95, 0.95, 1)
 TabBar/colors/font_unselected_color = Color(0.7, 0.7, 0.7, 1)
-TabBar/constants/h_separation = 16
+TabBar/constants/h_separation = 0
 TabBar/constants/icon_max_width = 0
 TabBar/constants/outline_size = 0
 TabBar/font_sizes/font_size = 32

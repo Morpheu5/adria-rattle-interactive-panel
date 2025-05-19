@@ -6,8 +6,8 @@ var rattle_state: RattleStates = RattleStates.IDLE
 var input_handling = true
 var labels = []
 
-var menu_visible = false
-var interactable = false
+var menu_visible = true
+var interactable = true
 
 var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
 var current_info_screen
@@ -19,7 +19,7 @@ func _ready() -> void:
 		$MainMenu/Labels/Analysis,
 		$MainMenu/Labels/Technology,
 	]
-	$MainMenu/Labels.modulate = Color(1.0, 1.0, 1.0, 0.0)
+	$MainMenu/Labels.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 func is_distance_shorter(label, event, _min):
 	return label.get_screen_position().distance_to(event.position) < _min.get_screen_position().distance_to(event.position)

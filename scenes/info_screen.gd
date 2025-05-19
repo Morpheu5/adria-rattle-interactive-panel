@@ -84,7 +84,7 @@ func _on_back_button_pressed() -> void:
 	emit_signal("dismiss")
 
 func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images: Array, captions: Array) -> void:
-	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()) or (event is InputEventScreenTouch and event.is_released()):
+	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()):
 		var c = big_carousel.instantiate()
 		c.image_idx = image_idx
 		c.thumbs = thumbs

@@ -22,7 +22,7 @@ func _ready() -> void:
 
 
 func _on_thumb_pressed(event, k):
-	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()) or (event is InputEventScreenTouch and event.is_released()):
+	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released()):
 		image_idx = k
 		image_name = images[k]
 		load_big_picture(image_name)
