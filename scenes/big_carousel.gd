@@ -8,8 +8,8 @@ var images: Array
 
 func _ready() -> void:
 	var thumbs_container: HBoxContainer = $BackgroundPanel/VBoxContainer/ThumbsScroller/ThumbsContainer
-	
 	image_name = images[image_idx]
+	load_big_picture(image_name)
 	for k in range(thumbs.size()):
 		var thumb = load(thumbs[k])
 		var thumb_rect = TextureRect.new()
