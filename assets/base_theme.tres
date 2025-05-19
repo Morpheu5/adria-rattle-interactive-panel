@@ -1,6 +1,14 @@
-[gd_resource type="Theme" load_steps=48 format=3 uid="uid://dpnb8nwq0o1ki"]
+[gd_resource type="Theme" load_steps=52 format=3 uid="uid://dpnb8nwq0o1ki"]
 
 [ext_resource type="FontFile" uid="uid://dsl7nmsnbjlxn" path="res://assets/Roboto-VariableFont_wdth,wght.ttf" id="1_jvko6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2hgr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhurp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xouc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85h58"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvko6"]
 content_margin_left = 4.0
@@ -400,14 +408,13 @@ Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
 Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
-Button/constants/outline_size = 0
 Button/font_sizes/font_size = 56
 Button/fonts/font = ExtResource("1_jvko6")
-Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = null
-Button/styles/normal = null
-Button/styles/pressed = null
+Button/styles/normal = SubResource("StyleBoxFlat_x2hgr")
+Button/styles/pressed = SubResource("StyleBoxEmpty_lhurp")
+FlatButton/styles/hover = SubResource("StyleBoxFlat_xouc1")
+FlatButton/styles/normal = SubResource("StyleBoxEmpty_85h58")
+FlatButton/styles/pressed = SubResource("StyleBoxFlat_xouc1")
 Label/font_sizes/font_size = 56
 Label/fonts/font = ExtResource("1_jvko6")
 MarginContainer/constants/margin_bottom = 60
