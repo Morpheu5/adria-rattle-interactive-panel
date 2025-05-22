@@ -2,13 +2,13 @@
 	"title": { "en": "History", "it": "SEGNI DEL PASSATO: LA NECROPOLI DI CA’ CIMA E LA TOMBA N. 39" },
 	"tabs": [
 		{
-			"title": { "en": "Tab 1", "it": "La necropoli di Ca' Cima" },
+			"title": { "en": "Tab 1", "it": "LA NECROPOLI DI CA' CIMA" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
 						"en": "Text\n\nSome more Text.",
-						"it": "Il contesto di rinvenimento del sonaglio in terracotta dipinta protagonista di questa installazione è la tomba n. 39 della necropoli preromana di Ca' Cima, databile alla seconda metà del III secolo - inizi del II secolo a.C. grazie ad alcuni elementi del corredo.\nLa necropoli, oggetto di scavi dal 1970 al 2012 con la direzione scientifica dell’allora Soprintendenza archeologica del Veneto, ha restituito oltre 289 sepolture ad incinerazione e ad inumazione databili dall’età arcaica (metà del VI secolo a.C.) all’età ellenistica e poi romana. Situata a nord est rispetto all’abitato antico, era separata da esso da un complesso sistema idrografico e nelle fasi più recenti si estendeva a nord lungo la direttrice della via Annia, in località Amolara e Amolaretta."
+						"it": "Il sonaglio protagonista di questa installazione proviene dalla tomba n. 39 della necropoli preromana di Ca' Cima. Gli oggetti ritrovati insieme ad esso permettono di datare la sepoltura tra la seconda metà del III secolo e l’inizio del II secolo a.C. La necropoli, indagata tra il 1970 e il 2012 sotto la direzione scientifica della Soprintendenza archeologica del Veneto, ha restituito più di 289 tombe, sia a incinerazione (con resti cremati) sia a inumazione (con corpi deposti integri). Le sepolture coprono un ampio arco di tempo: dall’età arcaica (metà del VI secolo a.C.) fino all’epoca ellenistica e poi romana. Situata a nord-est dell’antico abitato, la necropoli era separata dal centro da un complesso sistema di corsi d’acqua. In epoche più tarde si estese verso nord, lungo il tracciato della via Annia, in una zona oggi conosciuta come Amolara e Amolaretta."
 					}
 				},
 				{
@@ -16,35 +16,25 @@
 					"content": [
 						{
 							"type": "image",
-							"content": "res://assets/content/images/a.jpg",
-							"thumbnail": "res://assets/content/images/a_thumb.jpg",
+							"content": "res://assets/content/images/Fig_1 necropoli.png",
+							"thumbnail": "res://assets/content/images/Fig_1 necropoli_thumb.png",
 							"caption": {
-								"en": "Lorem Ingurish (c.a. 500 b.C.)",
-								"it": "Lorem Italiano (circa 500 b.C.)"
+								"en": "Map of the Necropolis of Ca' Cima",
+								"it": "Mappa della Necropoli di Ca' Cima"
 							}
-						},
-						{
-							"type": "image",
-							"content": "res://assets/content/images/b.jpg",
-							"thumbnail": "res://assets/content/images/b_thumb.jpg",
-							"caption": {
-								"en": "Lorem Ingurish (c.a. 700 b.C.)",
-								"it": "Lorem Italiano (circa 700 b.C.)"
-							}
-						},
+						}
 					]
 				}
 			]
 		},
 		{
-			"title": { "en": "Tab 1", "it": "La tomba n. 39" },
+			"title": { "en": "Tab 1", "it": "LA TOMBA N. 39" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "Text\n\nSome more Text.",
-						"it": "La tomba n. 39  fu rinvenuta, molto compressa, dai lavori agricoli successivi, durante la campagna di scavi 1994/1995. Si tratta un’incinerazione in semplice fossa e si distingue per due caratteristiche peculiari: è una sepoltura infantile e presenta un corredo misto di elementi celtici ed etrusco-ellenistici. Il corredo comprende un’olla ossuario, vasellame e strumenti riconducibili al rituale etrusco del banchetto, oggetti di uso infantile come un askos (usato forse come vaso poppatoio), una fibula in argento e un’armilla celtica in vetro di piccole dimensioni, che indicano la giovane età del defunto, insieme ad altri elementi di origine celtica come un torquis e un bracciale d’argento a filo ritorto, forse offerte da parte dei parenti, oltre a un raro set miniaturistico con attrezzi e armi in ferro.\nCompletano il corredo degli oggetti in lamina di bronzo sbalzata, forse opera di artigiani atestini, di difficile lettura per lo stato di conservazione estremamente frammentato. Si tratta di almeno due cilindretti cavi con le estremità sigillate e un foro laterale che trovano confronti precisi a Este e Altino. La loro interpretazione è controversa: amuleti, strumenti per la filatura, oppure, come nel caso di un oggetto simile conservato a Trieste, sonagli in bronzo.
-"
+						"en": "NA",
+						"it": "La tomba n. 39 è stata scoperta durante la campagna di scavi del 1994-1995, particolarmente compromessa da lavori agricoli precedenti.. Si tratta di una sepoltura a incinerazione in semplice fossa, appartenente a un bambino. Il corredo funerario è particolarmente interessante per la presenza di oggetti appartenenti a culture diverse, in particolare celtica ed etrusco-ellenistica. Oltre all’olla che conteneva le ceneri, erano presenti vasellame da banchetto, una fibula d’argento, un askos (usato come una sorta di “biberon”), e piccoli ornamenti che suggeriscono la giovane età del defunto. Tra i reperti più insoliti si trova un set miniaturistico in ferro, composto da armi e strumenti, probabilmente di valore simbolico o rituale. Fanno parte del corredo anche alcuni oggetti in lamina di bronzo decorata, molto frammentati. Due di questi, piccoli cilindri cavi con un foro laterale simili ad altri trovati a Este, sono probabilmente sonagli, che in origine avevano un manico di legno per poterli scuotere."
 					}
 				},
 				{
@@ -52,23 +42,35 @@
 					"content": [
 						{
 							"type": "image",
-							"content": "res://assets/content/images/a.jpg",
-							"thumbnail": "res://assets/content/images/a_thumb.jpg",
+							"content": "res://assets/content/images/Fig_2 tomba.jpg",
+							"thumbnail": "res://assets/content/images/Fig_2 tomba_thumb.jpg",
 							"caption": {
-								"en": "Lorem Ingurish (c.a. 500 b.C.)",
-								"it": "Lorem Italiano (circa 500 b.C.)"
+								"en": "NA",
+								"it": "Il contenuto della tomba n. 39 è visibile nella vetrina a fianco."
 							}
 						},
 						{
 							"type": "image",
-							"content": "res://assets/content/images/b.jpg",
-							"thumbnail": "res://assets/content/images/b_thumb.jpg",
+							"content": "res://assets/content/images/tomba_39_scavo.jpg",
+							"thumbnail": "res://assets/content/images/tomba_39_scavo_thumb.jpg",
 							"caption": {
-								"en": "Lorem Ingurish (c.a. 700 b.C.)",
-								"it": "Lorem Italiano (circa 700 b.C.)"
+								"en": "NA",
+								"it": "La tomba 39 nel momento dello scavo."
 							}
-						},
+						}
 					]
+				}
+			]
+		},
+		{
+			"title": { "en": "NA", "it": "IL SONAGLIO" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "Il sonaglio IG 12929, in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico. Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi, celtici ed ellenistici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
+					}
 				}
 			]
 		}

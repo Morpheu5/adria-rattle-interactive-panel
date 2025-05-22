@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://fjtvl4gxw6sd"]
+[gd_scene load_steps=12 format=3 uid="uid://fjtvl4gxw6sd"]
 
 [ext_resource type="Script" uid="uid://d0r0fpftlfun1" path="res://scenes/big_carousel.gd" id="1_wamd2"]
 [ext_resource type="Texture2D" uid="uid://u4x6c264rr10" path="res://assets/ui/left.png" id="2_igyu6"]
@@ -26,6 +26,10 @@ corner_radius_bottom_left = 32
 shadow_color = Color(0, 0, 0, 0.752941)
 shadow_size = 64
 shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pm5jp"]
+content_margin_top = 12.0
+content_margin_bottom = 18.0
 
 [node name="BigCarousel" type="PanelContainer"]
 anchors_preset = 15
@@ -97,6 +101,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("6_pm5jp")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pm5jp")
 text = "TESTING
 testing"
 horizontal_alignment = 1

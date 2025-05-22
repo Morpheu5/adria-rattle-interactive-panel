@@ -105,6 +105,7 @@ size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+bbcode_enabled = true
 text = "Lorem ipsum dolor
 "
 fit_content = true

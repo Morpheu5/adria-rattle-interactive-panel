@@ -1,0 +1,85 @@
+{
+	"title": { "en": "Analysis", "it": "LE ANALISI: FOTOGRAFIA MULTISPETTRALE, RX-TAC, 3D" },
+	"tabs": [
+		{
+			"title": { "en": "Tab 1", "it": "FOTOGRAFIA MULTISPETTRALE" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "[b]Cos'è?[/b]
+La fotografia multispettrale consente di osservare dettagli invisibili a occhio nudo, grazie all’uso di speciali fotocamere e luci che consentono di catturare la luce in più bande dello, andando oltre a quelle della fotografia tradizionale: da quella dell’ultravioletto (UV, con onde lunghe 340 nm), fino all’infrarosso (IR, con onde lunghe 1100 nm). Ogni lunghezza d’onda rivela aspetti diversi del materiale, dai pigmenti nascosti alle tracce di restauro. L’elaborazione digitale permette di evidenziare queste differenze e ottenere informazioni non invasive, utili per lo studio e le strategie per la migliore conservazione dei reperti.
+
+TODO: INSERIRE IMMAGINE SULLO SPETTRO LUMINOSO
+
+[b]Perché?[/b]
+La fotografia multispettrale, nel caso del sonaglio, è stata utilizzata sulla superficie dell’oggetto per acquisire nuovi elementi sulle tecniche di realizzazione e decorazione. 
+
+TODO: INSERIRE IMMAGINI MULTISPETTRALI
+
+[b]Cosa è emerso?[/b]
+[table=2]
+[cell]•  [/cell][cell]La decorazione presenta impronte regolari e concentriche, forse lasciate dallo strumento utilizzato per modellare e decorare il sonaglio.[/cell]
+[cell]•  [/cell][cell]Sulla metà caratterizzata da una superficie in cattivo stato di conservazione, l’analisi ha rivelato tracce di pigmento che suggeriscono la presenza originaria di altri raggi decorativi, forse fino a 12 come nella metà opposta.[/cell]
+[cell]•  [/cell][cell]Sotto l’aspetto del colore, le decorazioni delle due metà dell’oggetto si comportano in modo diverso sotto l’infrarosso (IR). Ciò indica, forse, scelte tecniche consapevoli anche legate al colore rosso o nero ottenuto.[/cell]
+[/table]
+"
+					}
+				},
+				
+			]
+		},
+		{
+			"title": { "en": "Tab 1", "it": "RADIOGRAFIA E TAC" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "[b]Alla scoperta dell'invisibile[/b]
+Questa sezione, insieme alle successive, vi guiderà nel cuore delle analisi diagnostiche condotte sull’antico sonaglio. Tutte le indagini sono state eseguite con tecniche non invasive, senza mai aprirlo né alterarne la struttura.
+Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’occhio umano non avrebbe mai potuto vedere: la sorprendente conformazione interna degli elementi sonanti. E la scoperta è stata tutt’altro che scontata. Non uno, non due… ma ben quattro piccole sferette racchiuse al suo interno che, al movimento del corpo in cui sono contenuto, producono suono.
+"
+					}
+				},
+				
+			]
+		},
+		{
+			"title": { "en": "Tab 1", "it": "IL MODELLO 3D" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "Le tecnologie digitali 3D rappresentano oggi un’alternativa innovativa alla realizzazione di copie fisiche che risultano costose, lente da produrre e limitate nelle ipotesi ricostruttive. Il 3D permette di ricostruire virtualmente gli strumenti, simulare il loro suono, e condividerli facilmente. Inoltre, grazie alla stampa 3D, è possibile ottenere copie fisiche economiche e accessibili, utili anche per la divulgazione, la didattica e l’inclusione di pubblici con disabilità visive. In particolare, l’acquisizione 3D del sonaglio ha permesso di realizzare la copia interattiva che il visitatore può manipolare per ascoltare, a seconda di come viene mosso, il suono prodotto."
+					}
+				},
+				{
+					"type": "carousel",
+					"content": [
+						{
+							"type": "image",
+							"content": "res://assets/content/images/digital_twin_1.jpg",
+							"thumbnail": "res://assets/content/images/digital_twin_1_thumb.jpg",
+							"caption": {
+								"en": "NA",
+								"it": "Digital Twin"
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/rx_1.jpg",
+							"thumbnail": "res://assets/content/images/rx_1_thumb.jpg",
+							"caption": {
+								"en": "NA",
+								"it": "Digital Twin"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

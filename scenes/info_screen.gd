@@ -62,6 +62,7 @@ func _configure_info_screen(data: Variant):
 					textbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 					textbox.size_flags_vertical = Control.SIZE_FILL
 					textbox.mouse_filter = Control.MOUSE_FILTER_PASS
+					textbox.bbcode_enabled = true
 					vbox_container.add_child(textbox)
 					textbox.text = content_block["content"][lang]
 					textbox.theme = custom_theme
@@ -73,6 +74,7 @@ func _configure_info_screen(data: Variant):
 					vbox_container.add_child(carousel)
 					for k in range(content_block["content"].size()):
 						var image = TextureRect.new()
+						#image.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
 						image.texture = load(content_block["content"][k]["thumbnail"])
 						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
 						carousel.add_child(image)
