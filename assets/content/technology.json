@@ -1,3 +1,40 @@
 {
-	
+	"title": { "en": "NA", "it": "LA TECNOLOGIA: SIMULAZIONE SONORA E REALIZZAZIONE " },
+	"tabs": [
+		{
+			"title": { "en": "NA", "it": "LA SIMULAZIONE SONORA" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "Il sonaglio è stato sottoposto ad operazioni di registrazione in camera silente e simulazione acustica con l’obiettivo di restituire il suono che lo strumento è in grado di produrre oggi. L’esperienza sensoriale proposta è legata alla nuova musealizzazione dell’oggetto che propone un’interazione tattile, gestuale e uditiva con il modello ricostruito, frutto di sapere ingegneristico applicato ad un oggetto musicale dell’antichità.
+Questo è stato reso possibile da alcune azioni tra cui la registrazione dal vivo del suono prodotto agitando il sonaglio, sotto l’attenta direzione del team di archeologi, e lo studio delle caratteristiche acustiche sulla base delle geometrie e dei materiali rilevati attraverso scansioni quali raggi X e Tomografia Assiale Computerizzata (TAC) che permettono non solo di investigare la struttura interna del sonaglio ma anche di intuirne materiali e tecniche di realizzazione.
+
+[b]La Camera Silente[/b]
+Il suoni prodotti dal sonaglio sono stati registrati all’interno di una camera silente, un ambiente controllato le cui pareti sono costruite in modo da ridurre drasticamente i rumori provenienti dall’esterno della cabina, e, allo stesso tempo, evitare il riverbero interno, ovvero la riflessione dei suoni in fase di registrazione contro le pareti della camera. Questo è un passaggio fondamentale per acquisire il suono “grezzo” proveniente dal sonaglio, ovvero il suono che raggiunge direttamente l’orecchio dell’ascoltatore, senza rumori e riverberi dovuti all’ambiente circostante. Particolare attenzione inoltre è stata riposta nel catturare i diversi tipi di suoni prodotti dal sonaglio dovuti alle varie orientazioni e modalità d’uso dello strumento, in particolare i suoni da impatto causati dall’urto tra le sferette all’interno e la cavità, e i suoni da rotolamento prodotti dal trascinamento delle sferette lungo il bordo della cavità stessa.
+"
+					}
+				}
+			]
+		},
+		{
+			"title": { "en": "NA", "it": "IL MODELLO ELETTRONICO" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "[b]La replica elettronica[/b]
+Per realizzare la replica elettronica, il team di ingegneri ha inserito una varietà di circuiti elettronici e sensori all’interno di un guscio di plastica che simula l’aspetto del sonaglio originale. Il cuore elettronico di questo oggetto è un microcontrollore – un tipo di computer molto compatto e a basso consumo – già predisposto per interfacciarsi con diverse tipologie di sensori, tra cui un accelerometro e un giroscopio che misurano il modo in cui muoviamo e orientiamo il sonaglio replica durante l’uso.
+Il contenitore in plastica che possiamo tenere in mano è stato prodotto attraverso il processo di manifattura additiva, meglio nota come stampa 3D, a partire dal modello tridimensionale ricostruito attraverso tecniche diagnostiche quali la Tomografia Assiale Computerizzata (TAC) e la scansione a luce strutturata.
+
+[b]La simulazione acustica[/b]
+I suoni prodotti dalla replica elettronica provengono dal lavoro di campionamento effettuato in camera silente, che sono stati organizzati a seconda del tipo di movimento che li produce. In questo modo, il microcontrollore all’interno del guscio può, usando le informazioni provenienti dai vari sensori, riconoscere il movimento che eseguiamo tenendo in mano l’oggetto, e riprodurre il suono più adatto, restituendo un’esperienza quanto più accurata possibile. Per completare la simulazione, il guscio contiene un piccolo elemento vibrante, simile a quelli contenuti ormai in ogni telefono cellulare moderno, che contribuisce a dare la sensazione del movimento degli elementi sonanti presenti nel sonaglio originale.
+"
+					}
+				}
+			]
+		}
+	]
 }

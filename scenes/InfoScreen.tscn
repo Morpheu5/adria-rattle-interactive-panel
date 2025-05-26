@@ -70,6 +70,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackButton2" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/TitleBar"]
+custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 theme = ExtResource("1_i6bd7")
 text = "    "
@@ -111,9 +112,42 @@ text = "Lorem ipsum dolor
 fit_content = true
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 texture = ExtResource("5_e6a6a")
 expand_mode = 4
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_e6a6a")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_e6a6a")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_e6a6a")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_e6a6a")
+expand_mode = 1
 stretch_mode = 4
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/TitleBar/BackButton" to="." method="_on_back_button_pressed"]

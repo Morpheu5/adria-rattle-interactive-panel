@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=14 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bfd5ad2y1xwdh" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_jyhfs"]
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://df1vhc5k8uo2o" path="res://scenes/main_menu_label.gd" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bks86htqt51bj" path="res://assets/ui/information.png" id="5_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="7_tipki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85g3d"]
@@ -42,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="History" type="Label" parent="MainMenu/Labels"]
 layout_mode = 0
@@ -87,6 +89,23 @@ vertical_alignment = 1
 uppercase = true
 script = ExtResource("4_o6xl0")
 filename = "technology"
+
+[node name="CreditsButton" type="Button" parent="MainMenu"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -108.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_force_pass_scroll_events = false
+icon = ExtResource("5_85g3d")
+flat = true
+icon_alignment = 1
 
 [node name="SceneRoot" type="Node3D" parent="."]
 
@@ -135,3 +154,5 @@ light_color = Color(0.796004, 0.59055, 0.905169, 1)
 [node name="OSCServer" type="Node" parent="SceneRoot"]
 script = ExtResource("3_jyhfs")
 metadata/_custom_type_script = "uid://bfd5ad2y1xwdh"
+
+[connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]

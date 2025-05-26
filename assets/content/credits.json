@@ -1,0 +1,29 @@
+{
+	"title": { "en": "Credits", "it": "RICONOSCIMENTI" },
+	"tabs": [
+		{
+			"title": { "en": "", "it": "" },
+			"content": [
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "Questa installazione museale vi permette di interagire in maniera diretta con il prototipo di un sonaglio in terracotta e di scoprire le numerose analisi (fotografia multispettrale, RX, TAC, simulazione sonora, ricostruzione 3D) che sono state realizzate sul suo originale  nell’ambito del Progetto di Rilevante Interesse Nazionale (PRIN) \"MUSE. MUSical Ecosystems of Ancient Northern Italy (XIII B.C.–VII C.E.)\". 
+
+Il progetto si propone di mappare, catalogare e analizzare le testimonianze sonore delle civiltà dell’antica Italia nord-orientale, dal XIII secolo a.C. al VII secolo d.C., studiando in modo multidisciplinare oggetti sonori e strumenti musicali rinvenuti nei territori oggi corrispondenti al Veneto e all’Emilia-Romagna, con l’obiettivo di ricostruire gli ecosistemi sonori del passato e comprenderne la varietà e gli usi musicali.
+
+[table=2]
+[cell]•  [/cell][cell]Università degli Studi di Padova: Paola Dessì, Mario La Rosa, Laura Noviello, Anna Paola Fabbrocino, Andrea Franceschini, Giulio Pitteri, Antonio Rodà, [/cell]
+[cell]•  [/cell][cell]Fotografia multispettrale: Rita Deiana, Università degli Studi di Padova[/cell]
+[cell]•  [/cell][cell]Scansione 3D: Emanuela Faresin, Giuseppe Salemi, Università degli Studi di Padova[/cell]
+[cell]•  [/cell][cell]Autorizzazioni, dati archeologici e di scavo, supporto logistico e aspetti tecnici dell’installazione: Museo archeologico nazionale di Adria (Alberta Facchi, Giovanna Battista, Leonardo di Simone, Luca Bellan, Adriana Bruschi, Giovanna Furlanetto, Gianni Maculan (disegni), Angelo Gabriele Miceli, Elena Molena, Michele Sciortino, Roberto Sanavio, Melissa Zago)[/cell]
+[cell]•  [/cell][cell]Restauri: Stefano Buson, Silvano Buzzarello, Federica Santinon, Kriterion s.n.c.[/cell]
+[cell]•  [/cell][cell]Raggi X e TAC: TMB spa di Ceregnano (RO): Nicola Betto, Riccardo Soldati e, per il montaggio video, Massimo Manesco[/cell]
+[cell]•  [/cell][cell]Audioinnova: Nicolò Merendino[/cell]
+[/table]"
+					}
+				}
+			]
+		}
+	]
+}

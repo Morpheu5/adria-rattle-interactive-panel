@@ -68,14 +68,18 @@ func _configure_info_screen(data: Variant):
 					textbox.theme = custom_theme
 				"carousel":
 					var carousel = HBoxContainer.new()
-					carousel.alignment = BoxContainer.ALIGNMENT_CENTER
+					carousel.custom_minimum_size = Vector2(1700, 400)
+					carousel.alignment = BoxContainer.ALIGNMENT_END
+					carousel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 					carousel.add_theme_constant_override("separation", 50)
-					carousel.set_size(Vector2(1, 100))
 					vbox_container.add_child(carousel)
 					for k in range(content_block["content"].size()):
 						var image = TextureRect.new()
-						#image.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
 						image.texture = load(content_block["content"][k]["thumbnail"])
+						image.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+						image.size_flags_vertical = Control.SIZE_FILL
+						image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+						image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
 						carousel.add_child(image)
 			var spacer = Control.new()
