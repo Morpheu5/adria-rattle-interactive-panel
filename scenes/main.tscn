@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=15 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
@@ -6,6 +6,7 @@
 [ext_resource type="Environment" uid="uid://ctl3uwkad6pnb" path="res://assets/world_environment.tres" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://bfd5ad2y1xwdh" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_jyhfs"]
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="3_tefeu"]
+[ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="4_choun"]
 [ext_resource type="Script" uid="uid://df1vhc5k8uo2o" path="res://scenes/main_menu_label.gd" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bks86htqt51bj" path="res://assets/ui/information.png" id="5_85g3d"]
 [ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="7_tipki"]
@@ -52,6 +53,7 @@ offset_top = 206.0
 offset_right = 472.0
 offset_bottom = 272.0
 theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
 theme_override_font_sizes/font_size = 56
 text = "storia"
 horizontal_alignment = 1
@@ -67,6 +69,7 @@ offset_top = 211.0
 offset_right = 1653.0
 offset_bottom = 277.0
 theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
 theme_override_font_sizes/font_size = 56
 text = "analisi"
 horizontal_alignment = 1
@@ -82,6 +85,7 @@ offset_top = 887.0
 offset_right = 1129.0
 offset_bottom = 953.0
 theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
 theme_override_font_sizes/font_size = 56
 text = "tecnologia"
 horizontal_alignment = 1

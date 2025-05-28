@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqifbkl442uvn"]
+[gd_scene load_steps=8 format=3 uid="uid://dqifbkl442uvn"]
 
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="1_i6bd7"]
 [ext_resource type="Script" uid="uid://0dbsepctgee6" path="res://scenes/info_screen.gd" id="1_wf64k"]
 [ext_resource type="Shader" uid="uid://tm7dmklubvno" path="res://scenes/blur_shader.gdshader" id="2_uvk3b"]
 [ext_resource type="Texture2D" uid="uid://dc2mlc80scfp3" path="res://assets/ui/arrowLeft.png" id="4_e6a6a"]
 [ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="5_e6a6a"]
+[ext_resource type="Texture2D" uid="uid://bq6d1qtq8onle" path="res://assets/content/images/EM_spectrum.png" id="6_gog02"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e6a6a"]
 shader = ExtResource("2_uvk3b")
@@ -111,14 +112,8 @@ text = "Lorem ipsum dolor
 "
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
-visible = false
-layout_mode = 2
-texture = ExtResource("5_e6a6a")
-expand_mode = 4
-stretch_mode = 4
-
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -149,5 +144,11 @@ size_flags_horizontal = 3
 texture = ExtResource("5_e6a6a")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_gog02")
+expand_mode = 5
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/TitleBar/BackButton" to="." method="_on_back_button_pressed"]

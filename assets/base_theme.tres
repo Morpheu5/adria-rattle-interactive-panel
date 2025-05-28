@@ -1,6 +1,10 @@
-[gd_resource type="Theme" load_steps=52 format=3 uid="uid://dpnb8nwq0o1ki"]
+[gd_resource type="Theme" load_steps=56 format=3 uid="uid://dpnb8nwq0o1ki"]
 
-[ext_resource type="FontFile" uid="uid://dsl7nmsnbjlxn" path="res://assets/Roboto-VariableFont_wdth,wght.ttf" id="1_jvko6"]
+[ext_resource type="FontFile" uid="uid://dqw31so10ni1w" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Regular.ttf" id="1_tjcko"]
+[ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="3_x2hgr"]
+[ext_resource type="FontFile" uid="uid://c15r333ivjux6" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-BoldItalic.ttf" id="4_xouc1"]
+[ext_resource type="FontFile" uid="uid://1262xv25gkat" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Italic.ttf" id="5_y61c2"]
+[ext_resource type="FontFile" uid="uid://b7bwhl08ijs7l" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Light.ttf" id="6_bx4g4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2hgr"]
 
@@ -409,14 +413,14 @@ Button/constants/align_to_largest_stylebox = 0
 Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
 Button/font_sizes/font_size = 56
-Button/fonts/font = ExtResource("1_jvko6")
+Button/fonts/font = ExtResource("1_tjcko")
 Button/styles/normal = SubResource("StyleBoxFlat_x2hgr")
 Button/styles/pressed = SubResource("StyleBoxEmpty_lhurp")
 FlatButton/styles/hover = SubResource("StyleBoxFlat_xouc1")
 FlatButton/styles/normal = SubResource("StyleBoxEmpty_85h58")
 FlatButton/styles/pressed = SubResource("StyleBoxFlat_xouc1")
 Label/font_sizes/font_size = 56
-Label/fonts/font = ExtResource("1_jvko6")
+Label/fonts/font = ExtResource("1_tjcko")
 MarginContainer/constants/margin_bottom = 60
 MarginContainer/constants/margin_left = 60
 MarginContainer/constants/margin_right = 60
@@ -427,6 +431,10 @@ RichTextLabel/font_sizes/bold_italics_font_size = 40
 RichTextLabel/font_sizes/italics_font_size = 40
 RichTextLabel/font_sizes/mono_font_size = 40
 RichTextLabel/font_sizes/normal_font_size = 40
+RichTextLabel/fonts/bold_font = ExtResource("3_x2hgr")
+RichTextLabel/fonts/bold_italics_font = ExtResource("4_xouc1")
+RichTextLabel/fonts/italics_font = ExtResource("5_y61c2")
+RichTextLabel/fonts/normal_font = ExtResource("1_tjcko")
 ScrollContainer/styles/focus = SubResource("StyleBoxFlat_jvko6")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_7n61c")
 TabBar/colors/drop_mark_color = Color(1, 1, 1, 1)
@@ -439,7 +447,7 @@ TabBar/constants/h_separation = 0
 TabBar/constants/icon_max_width = 0
 TabBar/constants/outline_size = 0
 TabBar/font_sizes/font_size = 32
-TabBar/fonts/font = ExtResource("1_jvko6")
+TabBar/fonts/font = ExtResource("6_bx4g4")
 TabBar/icons/close = SubResource("ImageTexture_7n61c")
 TabBar/icons/decrement = SubResource("ImageTexture_lhurp")
 TabBar/icons/decrement_highlight = SubResource("ImageTexture_bx4g4")
@@ -464,7 +472,7 @@ TabContainer/constants/icon_separation = 6
 TabContainer/constants/outline_size = 0
 TabContainer/constants/side_margin = 50
 TabContainer/font_sizes/font_size = 48
-TabContainer/fonts/font = ExtResource("1_jvko6")
+TabContainer/fonts/font = ExtResource("6_bx4g4")
 TabContainer/icons/decrement = SubResource("ImageTexture_y61c2")
 TabContainer/icons/decrement_highlight = SubResource("ImageTexture_2tfge")
 TabContainer/icons/drop_mark = SubResource("ImageTexture_0lj2j")

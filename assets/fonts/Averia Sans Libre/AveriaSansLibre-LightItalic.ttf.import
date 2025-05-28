@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dsl7nmsnbjlxn"
-path="res://.godot/imported/Roboto-VariableFont_wdth,wght.ttf-2763b0a157b95f7545427108175658b9.fontdata"
+uid="uid://bm8il3lx6mxey"
+path="res://.godot/imported/AveriaSansLibre-LightItalic.ttf-7382426a1231ad66f42c697a0e3ccd79.fontdata"
 
 [deps]
 
-source_file="res://assets/Roboto-VariableFont_wdth,wght.ttf"
-dest_files=["res://.godot/imported/Roboto-VariableFont_wdth,wght.ttf-2763b0a157b95f7545427108175658b9.fontdata"]
+source_file="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-LightItalic.ttf"
+dest_files=["res://.godot/imported/AveriaSansLibre-LightItalic.ttf-7382426a1231ad66f42c697a0e3ccd79.fontdata"]
 
 [params]
 
@@ -29,12 +29,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

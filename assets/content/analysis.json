@@ -2,7 +2,7 @@
 	"title": { "en": "Analysis", "it": "LA TECNOLOGIA: SIMULAZIONE SONORA E REALIZZAZIONE DEL PROTOTIPO" },
 	"tabs": [
 		{
-			"title": { "en": "Tab 1", "it": "FOTOGRAFIA MULTISPETTRALE" },
+			"title": { "en": "NA", "it": "FOTOGRAFIA MULTISPETTRALE" },
 			"content": [
 				{
 					"type": "richtext",
@@ -10,14 +10,40 @@
 						"en": "NA",
 						"it": "[b]Cos'è?[/b]
 La fotografia multispettrale consente di osservare dettagli invisibili a occhio nudo, grazie all’uso di speciali fotocamere e luci che consentono di catturare la luce in più bande dello, andando oltre a quelle della fotografia tradizionale: da quella dell’ultravioletto (UV, con onde lunghe 340 nm), fino all’infrarosso (IR, con onde lunghe 1100 nm). Ogni lunghezza d’onda rivela aspetti diversi del materiale, dai pigmenti nascosti alle tracce di restauro. L’elaborazione digitale permette di evidenziare queste differenze e ottenere informazioni non invasive, utili per lo studio e le strategie per la migliore conservazione dei reperti.
-
-TODO: INSERIRE IMMAGINE SULLO SPETTRO LUMINOSO
-
+"
+					}
+				},
+				{
+					"type": "image",
+					"content": "res://assets/content/images/EM_spectrum.png",
+					"caption": {
+						"en": "NA",
+						"it": "Diagramma dello spettro elettromagnetico che include la porzione di luce visibile e invisibile\n(Philip Ronan, CC BY-SA 3.0, via Wikimedia Commons)"
+					}
+				},
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "
 [b]Perché?[/b]
 La fotografia multispettrale, nel caso del sonaglio, è stata utilizzata sulla superficie dell’oggetto per acquisire nuovi elementi sulle tecniche di realizzazione e decorazione. 
-
-TODO: INSERIRE IMMAGINI MULTISPETTRALI
-
+"
+					}
+				},
+				{
+					"type": "image",
+					"content": "res://assets/content/images/multispectral.jpg",
+					"caption": {
+						"en": "NA",
+						"it": "Immagini multispettrali del sonaglio, da sinistra: luce visibile (400-700 nm), ultravioletto e visibile (340-700 nm), infrarosso e visibile (400-1000 nm)."
+					}
+				},
+				{
+					"type": "richtext",
+					"content": {
+						"en": "NA",
+						"it": "
 [b]Cosa è emerso?[/b]
 [table=2]
 [cell]•  [/cell][cell]La decorazione presenta impronte regolari e concentriche, forse lasciate dallo strumento utilizzato per modellare e decorare il sonaglio.[/cell]
@@ -30,7 +56,7 @@ TODO: INSERIRE IMMAGINI MULTISPETTRALI
 			]
 		},
 		{
-			"title": { "en": "Tab 1", "it": "RADIOGRAFIA E TAC" },
+			"title": { "en": "NA", "it": "RADIOGRAFIA E TAC" },
 			"content": [
 				{
 					"type": "richtext",
@@ -46,7 +72,7 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 			]
 		},
 		{
-			"title": { "en": "Tab 1", "it": "IL MODELLO 3D" },
+			"title": { "en": "NA", "it": "IL MODELLO 3D" },
 			"content": [
 				{
 					"type": "richtext",
@@ -64,7 +90,7 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 							"thumbnail": "res://assets/content/images/digital_twin_1_thumb.jpg",
 							"caption": {
 								"en": "NA",
-								"it": "Digital Twin"
+								"it": "Sviluppo del prototipo di digital twin\n(Centro di Sonologia Computazionale, Dipartimento di Ingegneria dell'Informazione, Università di Padova)"
 							}
 						},
 						{
@@ -73,7 +99,7 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 							"thumbnail": "res://assets/content/images/rx_1_thumb.jpg",
 							"caption": {
 								"en": "NA",
-								"it": "Digital Twin"
+								"it": "Radiografia del sonaglio: il punto nero in alto è una sfera di acciaio di diametro 5 mm usata per dimensionare le immagini\n(TMB S.R.L.)"
 							}
 						}
 					]

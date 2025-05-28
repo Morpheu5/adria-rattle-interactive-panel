@@ -66,13 +66,41 @@ func _configure_info_screen(data: Variant):
 					vbox_container.add_child(textbox)
 					textbox.text = content_block["content"][lang]
 					textbox.theme = custom_theme
+				"image":
+					var image_margin_container = MarginContainer.new()
+					image_margin_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+					image_margin_container.size_flags_vertical = Control.SIZE_EXPAND
+					image_margin_container.add_theme_constant_override("margin_left", 120)
+					image_margin_container.add_theme_constant_override("margin_right", 120)
+					#image_margin_container.custom_minimum_size = Vector2(1768, 400)
+					var image = TextureRect.new()
+					image.texture = load(content_block["content"])
+					image.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
+					image.size_flags_horizontal = Control.SIZE_FILL
+					image.size_flags_vertical = Control.SIZE_EXPAND_FILL
+					image_margin_container.add_child(image)
+					vbox_container.add_child(image_margin_container)
+					#var spacer = Control.new()
+					#spacer.custom_minimum_size = Vector2(0, 32)
+					#vbox_container.add_child(spacer)
+					var caption = Label.new()
+					caption.text = content_block["caption"][lang]
+					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+					caption.size_flags_horizontal = Control.SIZE_FILL
+					caption.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+					caption.add_theme_font_size_override("font_size", 32)
+					caption.autowrap_mode = TextServer.AUTOWRAP_WORD
+					vbox_container.add_child(caption)
 				"carousel":
+					var carousel_container = CenterContainer.new()
 					var carousel = HBoxContainer.new()
+					carousel_container.add_child(carousel)
 					carousel.custom_minimum_size = Vector2(1700, 400)
-					carousel.alignment = BoxContainer.ALIGNMENT_END
+					carousel.alignment = BoxContainer.ALIGNMENT_CENTER
 					carousel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+					#carousel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+					carousel.set_anchors_preset(Control.PRESET_FULL_RECT)
 					carousel.add_theme_constant_override("separation", 50)
-					vbox_container.add_child(carousel)
 					for k in range(content_block["content"].size()):
 						var image = TextureRect.new()
 						image.texture = load(content_block["content"][k]["thumbnail"])
@@ -82,6 +110,7 @@ func _configure_info_screen(data: Variant):
 						image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
 						carousel.add_child(image)
+					vbox_container.add_child(carousel_container)
 			var spacer = Control.new()
 			spacer.custom_minimum_size = Vector2(0, 32)
 			vbox_container.add_child(spacer)

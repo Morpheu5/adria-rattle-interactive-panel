@@ -12,18 +12,12 @@
 					}
 				},
 				{
-					"type": "carousel",
-					"content": [
-						{
-							"type": "image",
-							"content": "res://assets/content/images/Fig_1 necropoli.png",
-							"thumbnail": "res://assets/content/images/Fig_1 necropoli_thumb.png",
-							"caption": {
-								"en": "Map of the Necropolis of Ca' Cima",
-								"it": "Mappa della Necropoli di Ca' Cima"
-							}
-						}
-					]
+					"type": "image",
+					"content": "res://assets/content/images/Fig_1 necropoli.png",
+					"caption": {
+						"en": "Map of the Necropolis of Ca' Cima",
+						"it": "Mappa della Necropoli di Ca' Cima"
+					}
 				}
 			]
 		},
