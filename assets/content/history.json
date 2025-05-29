@@ -65,6 +65,29 @@
 						"en": "NA",
 						"it": "Il sonaglio IG 12929, in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico. Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi, celtici ed ellenistici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
 					}
+				},
+				{
+					"type": "carousel",
+					"content": [
+						{
+							"type": "image",
+							"content": "res://assets/content/images/sonaglio.jpg",
+							"thumbnail": "res://assets/content/images/sonaglio.jpg",
+							"caption": {
+								"en": "NA",
+								"it": "Sonaglio IG 12929 in ceramica fine color camoscio."
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/sonaglio rx.jpg",
+							"thumbnail": "res://assets/content/images/sonaglio rx.jpg",
+							"caption": {
+								"en": "NA",
+								"it": "Immagine ai Raggi X che mette in evidenza le quattro sfere contenute nel sonaglio."
+							}
+						}
+					]
 				}
 			]
 		}

@@ -68,7 +68,15 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 "
 					}
 				},
-				
+				{
+					"type": "video",
+					"content": "res://assets/content/videos/sonaglio-raggi-x-tmb.ogv",
+					"poster": "res://assets/content/videos/sonaglio-raggi-x-tmb_poster.jpg",
+					"caption": {
+						"en": "NA",
+						"it": "Operazioni di scansione 3D del sonaglio con tecnologia RX-TAC eseguite dal personale di TMB S.R.L. nella sede di Ceregnano (RO)."
+					}
+				}
 			]
 		},
 		{

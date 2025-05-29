@@ -28,12 +28,12 @@ func _configure_info_screen(data: Variant):
 	
 	# Clear tab bar
 	var tab_container = $ColorRect/MarginContainer/VBoxContainer/TabContainer as TabContainer
-	#tab_container.add_theme_font_size_override("font_size", 32)
 	tab_container.theme = custom_theme
 	tab_container.tab_alignment = TabBar.ALIGNMENT_CENTER
 	for child in tab_container.get_children():
 		tab_container.remove_child(child)
 		child.queue_free()
+
 	# Load tabs
 	var tabs = data["tabs"].map(func(e): return e["title"][lang])
 	for i in range(tabs.size()):
@@ -52,7 +52,6 @@ func _configure_info_screen(data: Variant):
 		vbox_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		vbox_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		margin_container.add_child(vbox_container)
-		
 		for j in range(tab_data["content"].size()):
 			var content_block = tab_data["content"][j]
 			match content_block["type"]:
@@ -72,7 +71,6 @@ func _configure_info_screen(data: Variant):
 					image_margin_container.size_flags_vertical = Control.SIZE_EXPAND
 					image_margin_container.add_theme_constant_override("margin_left", 120)
 					image_margin_container.add_theme_constant_override("margin_right", 120)
-					#image_margin_container.custom_minimum_size = Vector2(1768, 400)
 					var image = TextureRect.new()
 					image.texture = load(content_block["content"])
 					image.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
@@ -80,9 +78,6 @@ func _configure_info_screen(data: Variant):
 					image.size_flags_vertical = Control.SIZE_EXPAND_FILL
 					image_margin_container.add_child(image)
 					vbox_container.add_child(image_margin_container)
-					#var spacer = Control.new()
-					#spacer.custom_minimum_size = Vector2(0, 32)
-					#vbox_container.add_child(spacer)
 					var caption = Label.new()
 					caption.text = content_block["caption"][lang]
 					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -91,17 +86,40 @@ func _configure_info_screen(data: Variant):
 					caption.add_theme_font_size_override("font_size", 32)
 					caption.autowrap_mode = TextServer.AUTOWRAP_WORD
 					vbox_container.add_child(caption)
+				"video":
+					var video_margin_container = MarginContainer.new()
+					video_margin_container.size_flags_horizontal = Control.SIZE_FILL
+					video_margin_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
+					video_margin_container.add_theme_constant_override("margin_left", 120)
+					video_margin_container.add_theme_constant_override("margin_right", 120)
+					
+					var video_poster = TextureRect.new()
+					video_poster.texture = load(content_block["poster"])
+					video_poster.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+					video_margin_container.add_child(video_poster)
+					
+					var video_player = VideoStreamPlayer.new()
+					video_margin_container.add_child(video_player)
+					video_player.stream = load(content_block["content"])
+					video_player.expand = true
+					video_player.custom_minimum_size = Vector2(1280, 720)
+					video_player.loop = true
+					video_player.set_paused(true)
+					vbox_container.add_child(video_margin_container)
+					var play_button = Button.new()
+					play_button.text = "play"
+					play_button.pressed.connect(_on_play_button_pressed.bind(video_player))
+					vbox_container.add_child(play_button)
 				"carousel":
+					var n = content_block["content"].size()
 					var carousel_container = CenterContainer.new()
 					var carousel = HBoxContainer.new()
 					carousel_container.add_child(carousel)
-					carousel.custom_minimum_size = Vector2(1700, 400)
+					carousel.custom_minimum_size = Vector2(1400, 1000.0/n)
 					carousel.alignment = BoxContainer.ALIGNMENT_CENTER
-					carousel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-					#carousel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 					carousel.set_anchors_preset(Control.PRESET_FULL_RECT)
 					carousel.add_theme_constant_override("separation", 50)
-					for k in range(content_block["content"].size()):
+					for k in range(n):
 						var image = TextureRect.new()
 						image.texture = load(content_block["content"][k]["thumbnail"])
 						image.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -126,3 +144,17 @@ func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images:
 		c.images = images
 		c.captions = captions
 		add_child(c)
+
+func _on_play_button_pressed(video_player: VideoStreamPlayer):
+	print(video_player.is_paused())
+	if video_player.is_paused():
+		video_player.set_paused(false)
+		if video_player.stream_position == 0.0:
+			video_player.play()
+	else:
+		video_player.set_paused(true)
+
+#func _on_video_player_finished(video_player: VideoStreamPlayer):
+	#video_player.stop()
+	#video_player.set_paused(true)
+	#video_player.stream_position == 0.0

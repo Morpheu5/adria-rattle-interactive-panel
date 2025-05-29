@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqifbkl442uvn"]
+[gd_scene load_steps=10 format=3 uid="uid://dqifbkl442uvn"]
 
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="1_i6bd7"]
 [ext_resource type="Script" uid="uid://0dbsepctgee6" path="res://scenes/info_screen.gd" id="1_wf64k"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dc2mlc80scfp3" path="res://assets/ui/arrowLeft.png" id="4_e6a6a"]
 [ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="5_e6a6a"]
 [ext_resource type="Texture2D" uid="uid://bq6d1qtq8onle" path="res://assets/content/images/EM_spectrum.png" id="6_gog02"]
+[ext_resource type="VideoStream" uid="uid://7t0bnnu8n5fw" path="res://assets/content/videos/sonaglio-raggi-x-tmb.ogv" id="7_x7osw"]
+[ext_resource type="Texture2D" uid="uid://c7xwi5pj2rgpl" path="res://assets/ui/right.png" id="8_l64ix"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e6a6a"]
 shader = ExtResource("2_uvk3b")
@@ -106,6 +108,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 bbcode_enabled = true
 text = "Lorem ipsum dolor
@@ -146,9 +149,29 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("6_gog02")
 expand_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_right = 120
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+stream = ExtResource("7_x7osw")
+autoplay = true
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_l64ix")
+stretch_mode = 2
 
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/TitleBar/BackButton" to="." method="_on_back_button_pressed"]
