@@ -46,55 +46,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="History" type="Label" parent="MainMenu/Labels"]
-layout_mode = 0
-offset_left = 281.0
-offset_top = 206.0
-offset_right = 472.0
-offset_bottom = 272.0
-theme = ExtResource("3_tefeu")
-theme_override_fonts/font = ExtResource("4_choun")
-theme_override_font_sizes/font_size = 56
-text = "storia"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-script = ExtResource("4_o6xl0")
-filename = "history"
-
-[node name="Analysis" type="Label" parent="MainMenu/Labels"]
-layout_mode = 0
-offset_left = 1446.0
-offset_top = 211.0
-offset_right = 1653.0
-offset_bottom = 277.0
-theme = ExtResource("3_tefeu")
-theme_override_fonts/font = ExtResource("4_choun")
-theme_override_font_sizes/font_size = 56
-text = "analisi"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-script = ExtResource("4_o6xl0")
-filename = "analysis"
-
-[node name="Technology" type="Label" parent="MainMenu/Labels"]
-layout_mode = 0
-offset_left = 791.0
-offset_top = 887.0
-offset_right = 1129.0
-offset_bottom = 953.0
-theme = ExtResource("3_tefeu")
-theme_override_fonts/font = ExtResource("4_choun")
-theme_override_font_sizes/font_size = 56
-text = "tecnologia"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-script = ExtResource("4_o6xl0")
-filename = "technology"
-
-[node name="CreditsButton" type="Button" parent="MainMenu"]
+[node name="CreditsButton" type="Button" parent="MainMenu/Labels"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -111,6 +64,80 @@ icon = ExtResource("5_85g3d")
 flat = true
 icon_alignment = 1
 
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Labels"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 960.0
+grow_vertical = 2
+alignment = 1
+
+[node name="SpacerTop" type="Control" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="History" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
+theme_override_font_sizes/font_size = 56
+text = "storia"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "history"
+
+[node name="Analysis" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
+theme_override_font_sizes/font_size = 56
+text = "analisi"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "analysis"
+
+[node name="Technology" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+theme = ExtResource("3_tefeu")
+theme_override_fonts/font = ExtResource("4_choun")
+theme_override_font_sizes/font_size = 56
+text = "tecnologia"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("4_o6xl0")
+filename = "technology"
+
+[node name="SpacerBottom" type="Control" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="LanguageButton" type="MenuButton" parent="MainMenu/Labels"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+offset_right = 48.0
+grow_vertical = 0
+theme = ExtResource("3_tefeu")
+text = "IT"
+item_count = 2
+popup/item_0/text = "Italiano"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+
 [node name="SceneRoot" type="Node3D" parent="."]
 
 [node name="Sonaglio" type="Node3D" parent="SceneRoot"]
@@ -125,7 +152,7 @@ osc_address = "/quaternion"
 metadata/_custom_type_script = "uid://b4euyqc6jm12e"
 
 [node name="Camera3D" type="Camera3D" parent="SceneRoot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
 
 [node name="Background" type="MeshInstance3D" parent="SceneRoot"]
 transform = Transform3D(9.84, 0, 0, 0, 9.84, 0, 0, 0, 9.84, 0, 0, -3)
@@ -159,4 +186,4 @@ light_color = Color(0.796004, 0.59055, 0.905169, 1)
 script = ExtResource("3_jyhfs")
 metadata/_custom_type_script = "uid://bfd5ad2y1xwdh"
 
-[connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/CreditsButton" to="." method="_on_credits_button_pressed"]

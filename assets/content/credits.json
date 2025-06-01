@@ -1,5 +1,5 @@
 {
-	"title": { "en": "Credits", "it": "RICONOSCIMENTI" },
+	"title": { "en": "ACKNOWLEDGEMENTS", "it": "RICONOSCIMENTI" },
 	"tabs": [
 		{
 			"title": { "en": "", "it": "" },
@@ -7,7 +7,19 @@
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "This installation allows you to interact directly with the prototype of a terracotta rattle and discover the numerous analyses (multispectral photography, X-ray, CT, sound simulation, 3D reconstruction) that were carried out on its original as part of the Project of Relevant National Interest (PRIN) \"MUSE. MUSical Ecosystems of Ancient Northern Italy (XIII B.C.–VII C.E.)\".
+
+The project aims to map, catalogue, and analyse the sound testimonies of the civilisations of ancient north-eastern Italy, from the 13th century BC to the 7th century AD, studying in a multidisciplinary way sound objects and musical instruments found in the territories now corresponding to Veneto and Emilia-Romagna, with the aim of reconstructing the sound ecosystems of the past and understanding their variety and musical uses.
+
+[table=2]
+[cell]• [/cell][cell]University of Padua: Paola Dessì, Mario La Rosa, Laura Noviello, Anna Paola Fabbrocino, Andrea Franceschini, Giulio Pitteri, Antonio Rodà, [/cell]
+[cell]• [/cell][cell]Multispectral photography: Rita Deiana, University of Padua[/cell]
+[cell]• [/cell][cell]3D scanning: Emanuela Faresin, Giuseppe Salemi, University of Padua[/cell]
+[cell]• [/cell][cell]Authorizations, archaeological and excavation data, logistical support and technical aspects of the installation: National Archaeological Museum of Adria (Alberta Facchi, Giovanna Battista, Leonardo di Simone, Luca Bellan, Adriana Bruschi, Giovanna Furlanetto, Gianni Maculan (drawings), Angelo Gabriele Miceli, Elena Molena, Michele Sciortino, Roberto Sanavio, Melissa Zago)[/cell]
+[cell]• [/cell][cell]Restoration: Stefano Buson, Silvano Buzzarello, Federica Santinon, Kriterion s.n.c.[/cell]
+[cell]• [/cell][cell]X-rays and CT scans: TMB S.P.A. of Ceregnano (RO): Nicola Betto, Riccardo Soldati and, for video editing, Massimo Manesco[/cell]
+[cell]• [/cell][cell]Audio Innova: Nicolò Merendino[/cell]
+[/table]",
 						"it": "Questa installazione museale vi permette di interagire in maniera diretta con il prototipo di un sonaglio in terracotta e di scoprire le numerose analisi (fotografia multispettrale, RX, TAC, simulazione sonora, ricostruzione 3D) che sono state realizzate sul suo originale  nell’ambito del Progetto di Rilevante Interesse Nazionale (PRIN) \"MUSE. MUSical Ecosystems of Ancient Northern Italy (XIII B.C.–VII C.E.)\". 
 
 Il progetto si propone di mappare, catalogare e analizzare le testimonianze sonore delle civiltà dell’antica Italia nord-orientale, dal XIII secolo a.C. al VII secolo d.C., studiando in modo multidisciplinare oggetti sonori e strumenti musicali rinvenuti nei territori oggi corrispondenti al Veneto e all’Emilia-Romagna, con l’obiettivo di ricostruire gli ecosistemi sonori del passato e comprenderne la varietà e gli usi musicali.

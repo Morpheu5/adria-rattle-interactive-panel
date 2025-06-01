@@ -1,13 +1,13 @@
 {
-	"title": { "en": "History", "it": "SEGNI DEL PASSATO: LA NECROPOLI DI CA’ CIMA E LA TOMBA N. 39" },
+	"title": { "en": "SIGNS OF THE PAST: THE CA’ CIMA NECROPOLIS AND TOMB N. 39", "it": "SEGNI DEL PASSATO: LA NECROPOLI DI CA’ CIMA E LA TOMBA N. 39" },
 	"tabs": [
 		{
-			"title": { "en": "Tab 1", "it": "LA NECROPOLI DI CA' CIMA" },
+			"title": { "en": "THE NECROPOLIS OF CA' CIMA", "it": "LA NECROPOLI DI CA' CIMA" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "Text\n\nSome more Text.",
+						"en": "The rattle featured in this installation comes from tomb no. 39 of the pre-Roman necropolis of Ca' Cima. The objects found with it allow us to date the burial between the second half of the 3rd century and the beginning of the 2nd century BC. The necropolis, investigated between 1970 and 2012 under the scientific direction of the Archaeological Superintendence of Veneto, has yielded more than 289 tombs, both cremated (with cremated remains) and inhumation (with bodies deposited intact). The burials cover a broad period of time: from the Archaic Age (mid-6th century BC) to the Hellenistic and then Roman eras. Located to the north-east of the ancient settlement, the necropolis was separated from the center by a complex system of waterways. In later periods it extended northwards, along the route of the Via Annia, in an area now known as Amolara and Amolaretta.",
 						"it": "Il sonaglio protagonista di questa installazione proviene dalla tomba n. 39 della necropoli preromana di Ca' Cima. Gli oggetti ritrovati insieme ad esso permettono di datare la sepoltura tra la seconda metà del III secolo e l’inizio del II secolo a.C. La necropoli, indagata tra il 1970 e il 2012 sotto la direzione scientifica della Soprintendenza archeologica del Veneto, ha restituito più di 289 tombe, sia a incinerazione (con resti cremati) sia a inumazione (con corpi deposti integri). Le sepolture coprono un ampio arco di tempo: dall’età arcaica (metà del VI secolo a.C.) fino all’epoca ellenistica e poi romana. Situata a nord-est dell’antico abitato, la necropoli era separata dal centro da un complesso sistema di corsi d’acqua. In epoche più tarde si estese verso nord, lungo il tracciato della via Annia, in una zona oggi conosciuta come Amolara e Amolaretta."
 					}
 				},
@@ -15,19 +15,19 @@
 					"type": "image",
 					"content": "res://assets/content/images/Fig_1 necropoli.png",
 					"caption": {
-						"en": "Map of the Necropolis of Ca' Cima",
-						"it": "Mappa della Necropoli di Ca' Cima"
+						"en": "Map of Adria: top right, the necropolis of Ca' Cima",
+						"it": "Pianta di Adria: in alto a destra la necropoli di Ca' Cima."
 					}
 				}
 			]
 		},
 		{
-			"title": { "en": "Tab 1", "it": "LA TOMBA N. 39" },
+			"title": { "en": "TOMB NO. 39", "it": "LA TOMBA N. 39" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "Tomb no. 39 was discovered during the 1994-1995 excavation campaign, particularly compromised by previous agricultural work. It is a cremation burial in a simple pit, belonging to a child. The grave goods are particularly interesting for the presence of objects belonging to different cultures, in particular Celtic and Etruscan-Hellenistic. In addition to the olla containing the ashes, there were banquet pottery, a silver fibula, an askos (used as a sort of \"baby bottle\"), and small ornaments that suggest the young age of the deceased. Among the most unusual finds is a miniature iron set, composed of weapons and tools, probably of symbolic or ritual value. The grave goods also include some objects in decorated bronze sheet, very fragmented. Two of these, small hollow cylinders with a lateral hole similar to others found in Este, are probably rattles, which originally had a wooden handle to be able to shake them.",
 						"it": "La tomba n. 39 è stata scoperta durante la campagna di scavi del 1994-1995, particolarmente compromessa da lavori agricoli precedenti.. Si tratta di una sepoltura a incinerazione in semplice fossa, appartenente a un bambino. Il corredo funerario è particolarmente interessante per la presenza di oggetti appartenenti a culture diverse, in particolare celtica ed etrusco-ellenistica. Oltre all’olla che conteneva le ceneri, erano presenti vasellame da banchetto, una fibula d’argento, un askos (usato come una sorta di “biberon”), e piccoli ornamenti che suggeriscono la giovane età del defunto. Tra i reperti più insoliti si trova un set miniaturistico in ferro, composto da armi e strumenti, probabilmente di valore simbolico o rituale. Fanno parte del corredo anche alcuni oggetti in lamina di bronzo decorata, molto frammentati. Due di questi, piccoli cilindri cavi con un foro laterale simili ad altri trovati a Este, sono probabilmente sonagli, che in origine avevano un manico di legno per poterli scuotere."
 					}
 				},
@@ -39,8 +39,8 @@
 							"content": "res://assets/content/images/Fig_2 tomba.jpg",
 							"thumbnail": "res://assets/content/images/Fig_2 tomba_thumb.jpg",
 							"caption": {
-								"en": "NA",
-								"it": "Il contenuto della tomba n. 39 è visibile nella vetrina a fianco."
+								"en": "The content of tomb no. 39 is visible in the display case to the right.",
+								"it": "Il corredo della tomba n. 39 è visibile nella vetrina a fianco."
 							}
 						},
 						{
@@ -48,7 +48,7 @@
 							"content": "res://assets/content/images/tomba_39_scavo.jpg",
 							"thumbnail": "res://assets/content/images/tomba_39_scavo_thumb.jpg",
 							"caption": {
-								"en": "NA",
+								"en": "Tomb 39 at the time of excavation.",
 								"it": "La tomba 39 nel momento dello scavo."
 							}
 						}
@@ -57,13 +57,13 @@
 			]
 		},
 		{
-			"title": { "en": "NA", "it": "IL SONAGLIO" },
+			"title": { "en": "THE RATTLE", "it": "IL SONAGLIO" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
-						"it": "Il sonaglio IG 12929, in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico. Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi, celtici ed ellenistici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
+						"en": "The rattle (IG 12929), in fine suede-colored ceramic, has a rounded and hollow shape, and is decorated with a dark paint tending towards red. Inside there are four small terracotta spheres: when shaken, it produces a light and rhythmic sound. A similar object was found in the necropolis of Spina, in a tomb perhaps belonging to an adolescent, where the rattle could have been linked to the game of ball and pre-nuptial rites, a symbol of the passage to adulthood in female contexts. In the case of Adria, however, the rattle was placed in a child's tomb, probably male. Here its meaning seems more linked to the everyday world of childhood, as a simple play object, even if it retains a symbolic value linked to affection and protection. The funerary context itself is particularly interesting: the grave goods, in fact, combine Etruscan, Celtic and Hellenistic elements, testifying to the coexistence of different cultures in Adria in the Hellenistic age. In this context, the rattle also becomes an expression of a multicultural identity, a reflection of a world in dialogue between different traditions.",
+						"it": "Il sonaglio (IG 12929), in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico. Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi, celtici ed ellenistici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
 					}
 				},
 				{
@@ -74,8 +74,8 @@
 							"content": "res://assets/content/images/sonaglio.jpg",
 							"thumbnail": "res://assets/content/images/sonaglio.jpg",
 							"caption": {
-								"en": "NA",
-								"it": "Sonaglio IG 12929 in ceramica fine color camoscio."
+								"en": "Fine ceramic, chamois-coloured rattle.",
+								"it": "Sonaglio in ceramica fine color camoscio."
 							}
 						},
 						{
@@ -83,8 +83,8 @@
 							"content": "res://assets/content/images/sonaglio rx.jpg",
 							"thumbnail": "res://assets/content/images/sonaglio rx.jpg",
 							"caption": {
-								"en": "NA",
-								"it": "Immagine ai Raggi X che mette in evidenza le quattro sfere contenute nel sonaglio."
+								"en": "X-ray image showing the four spheres contained in the rattle.",
+								"it": "Immagine ai raggi X che mette in evidenza le quattro sfere contenute nel sonaglio."
 							}
 						}
 					]

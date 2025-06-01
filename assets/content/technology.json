@@ -1,36 +1,54 @@
 {
-	"title": { "en": "NA", "it": "LA TECNOLOGIA: SIMULAZIONE SONORA E REALIZZAZIONE " },
+	"title": { "en": "THE TECHNOLOGY: SOUND SIMULATION AND ELECTRONIC MODEL", "it": "LA TECNOLOGIA: SIMULAZIONE SONORA E MODELLO ELETTRONICO" },
 	"tabs": [
 		{
-			"title": { "en": "NA", "it": "LA SIMULAZIONE SONORA" },
+			"title": { "en": "THE SOUND SIMULATION", "it": "LA SIMULAZIONE SONORA" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
-						"it": "Il suono del sonaglio è stato registrato in camera silente e ricostruito tramite simulazione acustica per restituire il suono che lo strumento è in grado di produrre oggi. Questa nuova musealizzazione, infatti, consente un'esperienza sensoriale interattiva (tattile, gestuale e uditiva) grazie a un modello ricostruito, frutto di sapere ingegneristico applicato ad un oggetto musicale dell’antichità. Le azione che hanno reso realtà questa possibilità sono state diverse: da una parte, la registrazione dal vivo del suono e dall’altra, lo studio delle sue caratteristiche acustiche, grazie ai raggi X e alla TAC che hanno permesso di studiarne la struttura interna e di intuirne materiali e tecniche costruttive.
-
-[b]La Camera Silente[/b]
-Il suoni prodotti dal sonaglio sono stati registrati all’interno di una camera silente, un ambiente controllato le cui pareti sono costruite in modo da ridurre drasticamente i rumori provenienti dall’esterno della cabina, e, allo stesso tempo, evitare il riverbero interno, ovvero la riflessione dei suoni in fase di registrazione contro le pareti della camera. Questo è un passaggio fondamentale per acquisire il suono “grezzo” proveniente dal sonaglio, ovvero il suono che raggiunge direttamente l’orecchio dell’ascoltatore, senza rumori e riverberi dovuti all’ambiente circostante. Particolare attenzione inoltre è stata riposta nel catturare i diversi tipi di suoni prodotti dal sonaglio dovuti alle varie orientazioni e modalità d’uso dello strumento, in particolare i suoni da impatto causati dall’urto tra le sferette all’interno e la cavità, e i suoni da rotolamento prodotti dal trascinamento delle sferette lungo il bordo della cavità stessa.
-"
+						"en": "The sound of the rattle was recorded in a silent cabin and reconstructed through acoustic simulation to reproduce the sound that the instrument is capable of producing today. This new musealization features an interactive multi-sensory experience (tactile, gestural, and auditory) thanks to a reconstructed model. Different actions made this possible: on the one hand, the live recording of the sound, and on the other, the study of its acoustic characteristics, thanks to X-rays and CT scans that allowed us to study its internal structure and to intuit its materials and construction techniques.",
+						"it": "Il suono del sonaglio è stato registrato in camera silente e ricostruito tramite simulazione acustica per restituire il suono che lo strumento è in grado di produrre oggi. Questa nuova musealizzazione, infatti, consente un'esperienza sensoriale interattiva (tattile, gestuale e uditiva) grazie a un modello ricostruito. Le azione che hanno reso realtà questa possibilità sono state diverse: da una parte, la registrazione dal vivo del suono e dall’altra, lo studio delle sue caratteristiche acustiche, grazie ai raggi X e alla TAC che hanno permesso di studiarne la struttura interna e di intuirne materiali e tecniche costruttive."
+					}
+				},
+				{
+					"type": "video",
+					"content": "res://assets/content/videos/video_sonaglio.ogv",
+					"poster": "res://assets/content/videos/video_sonaglio_poster.jpg",
+					"caption": {
+						"en": "Audio recording performed at the Centro di Sonologia Computazionale, Department of Information Engineering, University of Padua.",
+						"it": "Registrazione audio eseguite al Centro di Sonologia Computazionale, Dipartimento di Ingegneria dell'Informazione, Università di Padova."
+					}
+				},
+				{
+					"type": "richtext",
+					"content": {
+						"en": "[b]Inside the silent cabin[/b]
+The sounds produced by the rattle were recorded inside a silent cabin, a controlled environment whose walls are built to reduce the noise coming from outside the cabin, and, at the same time, avoid internal reverberation, or the reflection of the sounds during recording against the walls of the room. This is a fundamental step to acquire the \"raw\" sound coming from the rattle, that is, the sound that reaches the listener’s ear directly, without noises and reverberations due to the surrounding environment. Particular attention was also paid to capturing the different types of sounds produced by the rattle due to the various orientations and modes of use of the instrument, in particular the impact sounds caused by the collision between the spheres inside and the cavity, and the rolling sounds produced by dragging the spheres along the edge of the cavity itself.",
+						"it": "[b]All'interno della camera silente[/b]
+I suoni prodotti dal sonaglio sono stati registrati all’interno di una camera silente, un ambiente controllato le cui pareti sono costruite in modo da ridurre drasticamente i rumori provenienti dall’esterno della cabina, e, allo stesso tempo, evitare il riverbero interno, ovvero la riflessione dei suoni in fase di registrazione contro le pareti della camera. Questo è un passaggio fondamentale per acquisire il suono “grezzo” proveniente dal sonaglio, ovvero il suono che raggiunge direttamente l’orecchio dell’ascoltatore, senza rumori e riverberi dovuti all’ambiente circostante. Particolare attenzione inoltre è stata riposta nel catturare i diversi tipi di suoni prodotti dal sonaglio dovuti alle varie orientazioni e modalità d’uso dello strumento, in particolare i suoni da impatto causati dall’urto tra le sferette all’interno e la cavità, e i suoni da rotolamento prodotti dal trascinamento delle sferette lungo il bordo della cavità stessa."
 					}
 				}
 			]
 		},
 		{
-			"title": { "en": "NA", "it": "IL MODELLO ELETTRONICO" },
+			"title": { "en": "THE ELECTRONIC MODEL", "it": "IL MODELLO ELETTRONICO" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "[b]The electronic replica[/b]
+To create the electronic replica, the team of engineers placed a variety of electronic circuits and sensors inside a plastic shell that simulates the appearance of the original rattle. The electronic heart of this object is a microcontroller – a type of very compact and low-power computer – which interfaces with different types of sensors, including an accelerometer and a gyroscope that measure the way we move the replica rattle during use.
+The plastic container that we can hold in our hands was produced through the additive manufacturing process, better known as 3D printing, starting from the three-dimensional model reconstructed through diagnostic techniques such as Computed Axial Tomography (CAT, or CT) and structured light scanning.
+
+[b]The acoustic simulation[/b]
+The sounds produced by the electronic replica come from the sampling work carried out in the silent cabin, which were organized according to the type of movement that produces them. In this way, the microcontroller inside the shell recognizes the movement we perform while holding the object, and reproduce the most suitable sound, returning an experience as accurate as possible. To complete the simulation, the shell contains a small vibrating element, similar to those now contained in every modern cell phone, which helps to give the sensation of the movement of the sounding elements present in the original rattle.",
 						"it": "[b]La replica elettronica[/b]
 Per realizzare la replica elettronica, il team di ingegneri ha inserito una varietà di circuiti elettronici e sensori all’interno di un guscio di plastica che simula l’aspetto del sonaglio originale. Il cuore elettronico di questo oggetto è un microcontrollore – un tipo di computer molto compatto e a basso consumo – già predisposto per interfacciarsi con diverse tipologie di sensori, tra cui un accelerometro e un giroscopio che misurano il modo in cui muoviamo e orientiamo il sonaglio replica durante l’uso.
-Il contenitore in plastica che possiamo tenere in mano è stato prodotto attraverso il processo di manifattura additiva, meglio nota come stampa 3D, a partire dal modello tridimensionale ricostruito attraverso tecniche diagnostiche quali la Tomografia Assiale Computerizzata (TAC) e la scansione a luce strutturata.
+Il contenitore in plastica che possiamo tenere in mano è stato prodotto attraverso il processo di manifattura additiva, meglio nota come stampa 3D, a partire dal modello tridimensionale ricostruito attraverso tecniche diagnostiche quali la Tomografia Computerizzata (TAC) e la scansione a luce strutturata.
 
 [b]La simulazione acustica[/b]
-I suoni prodotti dalla replica elettronica provengono dal lavoro di campionamento effettuato in camera silente, che sono stati organizzati a seconda del tipo di movimento che li produce. In questo modo, il microcontrollore all’interno del guscio può, usando le informazioni provenienti dai vari sensori, riconoscere il movimento che eseguiamo tenendo in mano l’oggetto, e riprodurre il suono più adatto, restituendo un’esperienza quanto più accurata possibile. Per completare la simulazione, il guscio contiene un piccolo elemento vibrante, simile a quelli contenuti ormai in ogni telefono cellulare moderno, che contribuisce a dare la sensazione del movimento degli elementi sonanti presenti nel sonaglio originale.
-"
+I suoni prodotti dalla replica elettronica provengono dal lavoro di campionamento effettuato in camera silente, che sono stati organizzati a seconda del tipo di movimento che li produce. In questo modo, il microcontrollore all’interno del guscio può, usando le informazioni provenienti dai vari sensori, riconoscere il movimento che eseguiamo tenendo in mano l’oggetto, e riprodurre il suono più adatto, restituendo un’esperienza quanto più accurata possibile. Per completare la simulazione, il guscio contiene un piccolo elemento vibrante, simile a quelli contenuti ormai in ogni telefono cellulare moderno, che contribuisce a dare la sensazione del movimento degli elementi sonanti presenti nel sonaglio originale."
 					}
 				}
 			]

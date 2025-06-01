@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=56 format=3 uid="uid://dpnb8nwq0o1ki"]
+[gd_resource type="Theme" load_steps=57 format=3 uid="uid://dpnb8nwq0o1ki"]
 
 [ext_resource type="FontFile" uid="uid://dqw31so10ni1w" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Regular.ttf" id="1_tjcko"]
 [ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="3_x2hgr"]
@@ -13,6 +13,13 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xouc1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85h58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y61c2"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 40.0
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvko6"]
 content_margin_left = 4.0
@@ -419,12 +426,19 @@ Button/styles/pressed = SubResource("StyleBoxEmpty_lhurp")
 FlatButton/styles/hover = SubResource("StyleBoxFlat_xouc1")
 FlatButton/styles/normal = SubResource("StyleBoxEmpty_85h58")
 FlatButton/styles/pressed = SubResource("StyleBoxFlat_xouc1")
+FlatMenuButton/font_sizes/font_size = 56
+FlatMenuButton/fonts/font = ExtResource("1_tjcko")
 Label/font_sizes/font_size = 56
 Label/fonts/font = ExtResource("1_tjcko")
 MarginContainer/constants/margin_bottom = 40
 MarginContainer/constants/margin_left = 100
 MarginContainer/constants/margin_right = 100
 MarginContainer/constants/margin_top = 40
+MenuButton/font_sizes/font_size = 56
+MenuButton/fonts/font = ExtResource("1_tjcko")
+PopupMenu/font_sizes/font_size = 56
+PopupMenu/fonts/font = ExtResource("1_tjcko")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_y61c2")
 RichTextLabel/constants/line_separation = 12
 RichTextLabel/font_sizes/bold_font_size = 40
 RichTextLabel/font_sizes/bold_italics_font_size = 40

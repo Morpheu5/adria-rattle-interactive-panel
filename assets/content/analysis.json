@@ -1,71 +1,74 @@
 {
-	"title": { "en": "Analysis", "it": "LA TECNOLOGIA: SIMULAZIONE SONORA E REALIZZAZIONE DEL PROTOTIPO" },
+	"title": { "en": "Analysis", "it": "LE ANALISI: FOTOGRAFIA MULTISPETTRALE, RX-TAC, 3D" },
 	"tabs": [
 		{
-			"title": { "en": "NA", "it": "FOTOGRAFIA MULTISPETTRALE" },
+			"title": { "en": "MULTISPECTRAL IMAGING", "it": "FOTOGRAFIA MULTISPETTRALE" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "[b]What is it?[/b]
+Multispectral photography allows us to observe details invisible to the naked eye, thanks to special cameras and lights that capture light in multiple bands of the spectrum, going beyond those of traditional photography: from ultraviolet (UV, with wavelength of 340 nm), to infrared (IR, with wavelengths of 1100 nm). Each wavelength reveals different aspects of the material, from hidden pigments to traces of restoration. Digital processing highlights these differences and obtains non-invasive information, useful for studying the objects and to find the best conservation strategies.",
 						"it": "[b]Cos'è?[/b]
-La fotografia multispettrale consente di osservare dettagli invisibili a occhio nudo, grazie all’uso di speciali fotocamere e luci che consentono di catturare la luce in più bande dello, andando oltre a quelle della fotografia tradizionale: da quella dell’ultravioletto (UV, con onde lunghe 340 nm), fino all’infrarosso (IR, con onde lunghe 1100 nm). Ogni lunghezza d’onda rivela aspetti diversi del materiale, dai pigmenti nascosti alle tracce di restauro. L’elaborazione digitale permette di evidenziare queste differenze e ottenere informazioni non invasive, utili per lo studio e le strategie per la migliore conservazione dei reperti.
-"
+La fotografia multispettrale consente di osservare dettagli invisibili a occhio nudo, grazie all’uso di speciali fotocamere e luci che consentono di catturare la luce in più bande dello spettro, andando oltre a quelle della fotografia tradizionale: da quella dell’ultravioletto (UV, con onde lunghe 340 nm), fino all’infrarosso (IR, con onde lunghe 1100 nm). Ogni lunghezza d’onda rivela aspetti diversi del materiale, dai pigmenti nascosti alle tracce di restauro. L’elaborazione digitale permette di evidenziare queste differenze e ottenere informazioni non invasive, utili per lo studio e le strategie per la migliore conservazione dei reperti."
 					}
 				},
 				{
 					"type": "image",
 					"content": "res://assets/content/images/EM_spectrum.png",
 					"caption": {
-						"en": "NA",
+						"en": "Diagram of the electromagnetic spectrum including the visible and invisible portions of light\n(Philip Ronan, CC BY-SA 3.0, via Wikimedia Commons)",
 						"it": "Diagramma dello spettro elettromagnetico che include la porzione di luce visibile e invisibile\n(Philip Ronan, CC BY-SA 3.0, via Wikimedia Commons)"
 					}
 				},
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
-						"it": "
-[b]Perché?[/b]
-La fotografia multispettrale, nel caso del sonaglio, è stata utilizzata sulla superficie dell’oggetto per acquisire nuovi elementi sulle tecniche di realizzazione e decorazione. 
-"
+						"en": "[b]Why?[/b]
+Multispectral photography, in the case of the rattle, was used on the surface of the object to acquire new information on the construction and decoration techniques.",
+						"it": "[b]Perché?[/b]
+La fotografia multispettrale, nel caso del sonaglio, è stata utilizzata sulla superficie dell’oggetto per acquisire nuovi elementi sulle tecniche di realizzazione e decorazione."
 					}
 				},
 				{
 					"type": "image",
 					"content": "res://assets/content/images/multispectral.jpg",
 					"caption": {
-						"en": "NA",
+						"en": "Multispectral images of the rattle, from left to right: visible light (400-700 nm), ultraviolet and visible light (340-700 nm), infrared and visible light (400-1000 nm).",
 						"it": "Immagini multispettrali del sonaglio, da sinistra: luce visibile (400-700 nm), ultravioletto e visibile (340-700 nm), infrarosso e visibile (400-1000 nm)."
 					}
 				},
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
-						"it": "
-[b]Cosa è emerso?[/b]
+						"en": "[b]What did we find?[/b]
+[table=2]
+[cell]• [/cell][cell]The decoration presents regular and concentric imprints, perhaps left by the tool used to shape and decorate the rattle.[/cell]
+[cell]• [/cell][cell]On the portion of surface characterised by a poor state of conservation, the analysis revealed traces of pigment that suggest the original presence of other decorative rays, perhaps up to 12 as on the opposite side.[/cell]
+[cell]• [/cell][cell]In terms of colour, the decorations on the two halves of the object behave differently under infrared light. This may point to conscious technical choices also linked to the red or black colour obtained.[/cell]
+[/table]",
+						"it": "[b]Cosa è emerso?[/b]
 [table=2]
 [cell]•  [/cell][cell]La decorazione presenta impronte regolari e concentriche, forse lasciate dallo strumento utilizzato per modellare e decorare il sonaglio.[/cell]
 [cell]•  [/cell][cell]Sulla metà caratterizzata da una superficie in cattivo stato di conservazione, l’analisi ha rivelato tracce di pigmento che suggeriscono la presenza originaria di altri raggi decorativi, forse fino a 12 come nella metà opposta.[/cell]
 [cell]•  [/cell][cell]Sotto l’aspetto del colore, le decorazioni delle due metà dell’oggetto si comportano in modo diverso sotto l’infrarosso (IR). Ciò indica, forse, scelte tecniche consapevoli anche legate al colore rosso o nero ottenuto.[/cell]
-[/table]
-"
+[/table]"
 					}
 				}
 			]
 		},
 		{
-			"title": { "en": "NA", "it": "RADIOGRAFIA E TAC" },
+			"title": { "en": "X-RAY AND CT SCANS", "it": "RADIOGRAFIA E TAC" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "[b]Discovering the invisible[/b]
+This section, along with the following ones, will guide you to the heart of the diagnostic analyses conducted on the ancient rattle. All the investigations were carried out with non-invasive techniques, without ever opening the object or altering its structure.
+Here you can see X-rays and CT images that have revealed what the human eye could never have seen: the surprising internal conformation of the sounding elements. And the discovery was anything but obvious: not one, not two... but four small spheres enclosed inside it that, when the rattle is shaken, produce sound.",
 						"it": "[b]Alla scoperta dell'invisibile[/b]
 Questa sezione, insieme alle successive, vi guiderà nel cuore delle analisi diagnostiche condotte sull’antico sonaglio. Tutte le indagini sono state eseguite con tecniche non invasive, senza mai aprirlo né alterarne la struttura.
-Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’occhio umano non avrebbe mai potuto vedere: la sorprendente conformazione interna degli elementi sonanti. E la scoperta è stata tutt’altro che scontata. Non uno, non due… ma ben quattro piccole sferette racchiuse al suo interno che, al movimento del corpo in cui sono contenuto, producono suono.
-"
+Qui potrete vedere radiografie e immagini TAC che hanno svelato ciò che l’occhio umano non avrebbe mai potuto vedere: la sorprendente conformazione interna degli elementi sonanti. E la scoperta è stata tutt’altro che scontata. Non uno, non due… ma ben quattro piccole sferette racchiuse al suo interno che, al movimento del corpo in cui sono contenuto, producono suono."
 					}
 				},
 				{
@@ -73,19 +76,19 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 					"content": "res://assets/content/videos/sonaglio-raggi-x-tmb.ogv",
 					"poster": "res://assets/content/videos/sonaglio-raggi-x-tmb_poster.jpg",
 					"caption": {
-						"en": "NA",
-						"it": "Operazioni di scansione 3D del sonaglio con tecnologia RX-TAC eseguite dal personale di TMB S.R.L. nella sede di Ceregnano (RO)."
+						"en": "3D scanning operations of the rattle with Computed Tomography (CT) technology performed by TMB S.P.A. staff at the Ceregnano (RO) headquarters.",
+						"it": "Operazioni di scansione 3D del sonaglio con tecnologia RX-TAC eseguite dal personale di TMB S.P.A. nella sede di Ceregnano (RO)."
 					}
 				}
 			]
 		},
 		{
-			"title": { "en": "NA", "it": "IL MODELLO 3D" },
+			"title": { "en": "THE 3D MODEL", "it": "IL MODELLO 3D" },
 			"content": [
 				{
 					"type": "richtext",
 					"content": {
-						"en": "NA",
+						"en": "Today, 3D digital technologies represent an innovative alternative to the creation of physical copies that are expensive, slow to produce and limited in the reconstruction hypotheses. 3D techniques allow to virtually reconstruct the instruments, simulate their sound, and share them easily. Furthermore, thanks to 3D printing, we can make affordable and accessible physical copies, useful for dissemination, teaching, and inclusion of audiences with visual disabilities. In particular, the 3D acquisition of the rattle has allowed to create the interactive copy that the visitor can manipulate to listen, depending on how it is moved, to the sound produced.",
 						"it": "Le tecnologie digitali 3D rappresentano oggi un’alternativa innovativa alla realizzazione di copie fisiche che risultano costose, lente da produrre e limitate nelle ipotesi ricostruttive. Il 3D permette di ricostruire virtualmente gli strumenti, simulare il loro suono, e condividerli facilmente. Inoltre, grazie alla stampa 3D, è possibile ottenere copie fisiche economiche e accessibili, utili anche per la divulgazione, la didattica e l’inclusione di pubblici con disabilità visive. In particolare, l’acquisizione 3D del sonaglio ha permesso di realizzare la copia interattiva che il visitatore può manipolare per ascoltare, a seconda di come viene mosso, il suono prodotto."
 					}
 				},
@@ -97,7 +100,7 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 							"content": "res://assets/content/images/digital_twin_1.jpg",
 							"thumbnail": "res://assets/content/images/digital_twin_1_thumb.jpg",
 							"caption": {
-								"en": "NA",
+								"en": "Development of the digital twin prototype\n(Centro di Sonologia Computazionale, Department of Information Engineering, University of Padua)",
 								"it": "Sviluppo del prototipo di digital twin\n(Centro di Sonologia Computazionale, Dipartimento di Ingegneria dell'Informazione, Università di Padova)"
 							}
 						},
@@ -106,8 +109,8 @@ Qui potrete esplorare radiografie e immagini TAC che hanno svelato ciò che l’
 							"content": "res://assets/content/images/rx_1.jpg",
 							"thumbnail": "res://assets/content/images/rx_1_thumb.jpg",
 							"caption": {
-								"en": "NA",
-								"it": "Radiografia del sonaglio: il punto nero in alto è una sfera di acciaio di diametro 5 mm usata per dimensionare le immagini\n(TMB S.R.L.)"
+								"en": "X-ray of the rattle: the black dot at the top is a 5 mm diameter steel sphere used to size the images\n(TMB S.P.A.)",
+								"it": "Radiografia del sonaglio: il punto nero in alto è una sfera di acciaio di diametro 5 mm usata per dimensionare le immagini\n(TMB S.P.A.)"
 							}
 						}
 					]

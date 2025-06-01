@@ -9,9 +9,14 @@ var lang: String = "it"
 const custom_theme = preload("res://assets/base_theme.tres")
 const big_carousel = preload("res://scenes/BigCarousel.tscn")
 
+const play_icon = preload("res://assets/ui/right.png")
+const pause_icon = preload("res://assets/ui/pause.png")
+const rewind_icon = preload("res://assets/ui/rewind.png")
+
 signal dismiss
 
 func _ready() -> void:
+	lang = TranslationServer.get_locale()
 	var file = FileAccess.open("res://assets/content/{filename}.json".format({"filename": filename}), FileAccess.READ)
 	var json_string = file.get_as_text()
 	var json = JSON.new()
@@ -88,28 +93,60 @@ func _configure_info_screen(data: Variant):
 					vbox_container.add_child(caption)
 				"video":
 					var video_margin_container = MarginContainer.new()
-					video_margin_container.size_flags_horizontal = Control.SIZE_FILL
+					video_margin_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 					video_margin_container.size_flags_vertical = Control.SIZE_EXPAND_FILL
-					video_margin_container.add_theme_constant_override("margin_left", 120)
-					video_margin_container.add_theme_constant_override("margin_right", 120)
-					
+
 					var video_poster = TextureRect.new()
 					video_poster.texture = load(content_block["poster"])
-					video_poster.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+
+					var ar = video_poster.texture.get_size().x / video_poster.texture.get_size().y
+					video_poster.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
+					video_poster.mouse_force_pass_scroll_events = true
 					video_margin_container.add_child(video_poster)
+
+					var controls_container = HBoxContainer.new()
+					controls_container.alignment = BoxContainer.ALIGNMENT_END
+					controls_container.size_flags_horizontal = Control.SIZE_SHRINK_END
+					controls_container.size_flags_vertical = Control.SIZE_SHRINK_END
+					controls_container.add_theme_constant_override("separation", 0)
+					var play_button = Button.new()
 					
 					var video_player = VideoStreamPlayer.new()
 					video_margin_container.add_child(video_player)
 					video_player.stream = load(content_block["content"])
+					video_player.custom_minimum_size = Vector2(1280, 1280/ar)
 					video_player.expand = true
-					video_player.custom_minimum_size = Vector2(1280, 720)
 					video_player.loop = true
-					video_player.set_paused(true)
+					video_player.mouse_force_pass_scroll_events = true
+					video_player.mouse_filter = Control.MOUSE_FILTER_PASS
+					video_player.gui_input.connect(_on_video_player_pressed.bind(video_player, play_button))
 					vbox_container.add_child(video_margin_container)
-					var play_button = Button.new()
-					play_button.text = "play"
-					play_button.pressed.connect(_on_play_button_pressed.bind(video_player))
-					vbox_container.add_child(play_button)
+
+					var stylebox = StyleBoxFlat.new()
+					stylebox.bg_color = Color(0,0,0,0.8)
+					play_button.icon = play_icon
+					play_button.pressed.connect(_on_play_button_pressed.bind(video_player, play_button))
+					play_button.add_theme_stylebox_override("normal", stylebox)
+					play_button.add_theme_stylebox_override("hover", stylebox)
+					var rewind_button = Button.new()
+					rewind_button.icon = rewind_icon
+					rewind_button.pressed.connect(_on_rewind_button_pressed.bind(video_player, play_button))
+					rewind_button.add_theme_stylebox_override("normal", stylebox)
+					rewind_button.add_theme_stylebox_override("hover", stylebox)
+
+					controls_container.add_child(rewind_button)
+					controls_container.add_child(play_button)
+					video_margin_container.add_child(controls_container)
+					
+					var caption = Label.new()
+					caption.text = content_block["caption"][lang]
+					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+					caption.size_flags_horizontal = Control.SIZE_FILL
+					caption.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
+					caption.add_theme_font_size_override("font_size", 32)
+					caption.autowrap_mode = TextServer.AUTOWRAP_WORD
+
+					vbox_container.add_child(caption)
 				"carousel":
 					var n = content_block["content"].size()
 					var carousel_container = CenterContainer.new()
@@ -145,14 +182,31 @@ func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images:
 		c.captions = captions
 		add_child(c)
 
-func _on_play_button_pressed(video_player: VideoStreamPlayer):
-	print(video_player.is_paused())
-	if video_player.is_paused():
+func _on_play_button_pressed(video_player: VideoStreamPlayer, play_button: Button):
+	if video_player.is_paused() or !video_player.is_playing():
+		play_button.icon = pause_icon
 		video_player.set_paused(false)
 		if video_player.stream_position == 0.0:
 			video_player.play()
 	else:
+		play_button.icon = play_icon
 		video_player.set_paused(true)
+
+func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer, play_button: Button):
+	if event is InputEventMouseButton and event.is_released():
+		if video_player.is_paused() or !video_player.is_playing():
+			play_button.icon = pause_icon
+			video_player.set_paused(false)
+			if video_player.stream_position == 0.0:
+				video_player.play()
+		else:
+			play_button.icon = play_icon
+			video_player.set_paused(true)
+
+func _on_rewind_button_pressed(video_player: VideoStreamPlayer, play_button: Button):
+	video_player.stop()
+	video_player.stream_position = 0.0
+	play_button.icon = play_icon
 
 #func _on_video_player_finished(video_player: VideoStreamPlayer):
 	#video_player.stop()
