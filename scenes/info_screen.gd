@@ -4,6 +4,10 @@ extends Control
 @export var title: String = ""
 @export var filename: String = ""
 
+var press_position: Vector2 = Vector2.ZERO
+const TAP_SIZE = 10
+var drag = false
+
 var lang: String = "it"
 
 const custom_theme = preload("res://assets/base_theme.tres")
@@ -193,7 +197,7 @@ func _on_play_button_pressed(video_player: VideoStreamPlayer, play_button: Butto
 		video_player.set_paused(true)
 
 func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer, play_button: Button):
-	if event is InputEventMouseButton and event.is_released():
+	if event is InputEventMouseButton and event.is_released() and !event.is_canceled() and !drag:
 		if video_player.is_paused() or !video_player.is_playing():
 			play_button.icon = pause_icon
 			video_player.set_paused(false)
@@ -207,6 +211,20 @@ func _on_rewind_button_pressed(video_player: VideoStreamPlayer, play_button: But
 	video_player.stop()
 	video_player.stream_position = 0.0
 	play_button.icon = play_icon
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_pressed():
+		press_position = event.position
+		drag = false
+	elif event is InputEventMouseButton and event.is_released():
+		var dist = event.position.distance_to(press_position)
+		if dist <= TAP_SIZE:
+			drag = false
+		else:
+			drag = true
+		press_position = Vector2.ZERO
+
+
 
 #func _on_video_player_finished(video_player: VideoStreamPlayer):
 	#video_player.stop()
