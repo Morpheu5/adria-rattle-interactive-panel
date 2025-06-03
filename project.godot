@@ -10,14 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Sonaglio di Adria (pannello interattivo)"
-config/name_localized={
-"en": "",
-"it": ""
-}
+config/name="Sonaglio di Adria RC1"
 run/main_scene="uid://bnywta3trmhm"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="uid://c2q3aykf1vvh4"
+config/icon="uid://v5ikinl41enm"
 
 [autoload]
 
@@ -27,6 +24,7 @@ Globals="*res://scripts/Globals.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]
