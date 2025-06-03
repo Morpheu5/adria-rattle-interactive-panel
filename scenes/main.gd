@@ -48,7 +48,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		#var closest = labels.reduce(func(_min, label): return label if is_distance_shorter(label, event, _min) else _min)
 		#var i = labels.find(closest)
 		#load_info_screen(labels[i].filename)
-	if (event is InputEventKey) and (event.keycode == KEY_ENTER) and event.is_pressed():
+	if (event is InputEventKey) and (event.keycode == KEY_ENTER) and event.is_pressed() and !info_screen_open:
 		if menu_visible:
 			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
 			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
