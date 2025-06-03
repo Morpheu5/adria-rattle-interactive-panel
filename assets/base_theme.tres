@@ -1,10 +1,16 @@
-[gd_resource type="Theme" load_steps=57 format=3 uid="uid://dpnb8nwq0o1ki"]
+[gd_resource type="Theme" load_steps=60 format=3 uid="uid://dpnb8nwq0o1ki"]
 
 [ext_resource type="FontFile" uid="uid://dqw31so10ni1w" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Regular.ttf" id="1_tjcko"]
 [ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="3_x2hgr"]
 [ext_resource type="FontFile" uid="uid://c15r333ivjux6" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-BoldItalic.ttf" id="4_xouc1"]
 [ext_resource type="FontFile" uid="uid://1262xv25gkat" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Italic.ttf" id="5_y61c2"]
 [ext_resource type="FontFile" uid="uid://b7bwhl08ijs7l" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Light.ttf" id="6_bx4g4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjcko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx4g4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2hgr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2hgr"]
 
@@ -421,6 +427,9 @@ Button/constants/h_separation = 0
 Button/constants/icon_max_width = 0
 Button/font_sizes/font_size = 56
 Button/fonts/font = ExtResource("1_tjcko")
+Button/styles/focus = SubResource("StyleBoxEmpty_tjcko")
+Button/styles/hover = SubResource("StyleBoxEmpty_bx4g4")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_x2hgr")
 Button/styles/normal = SubResource("StyleBoxFlat_x2hgr")
 Button/styles/pressed = SubResource("StyleBoxEmpty_lhurp")
 FlatButton/styles/hover = SubResource("StyleBoxFlat_xouc1")

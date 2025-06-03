@@ -8,21 +8,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sonaglio di Adria (pannello interattivo)\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
-"X-Source-Language: it\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
 
 #: scenes/InfoScreen.tscn
 msgid "TITLE"
 msgstr ""
 
 #: scenes/InfoScreen.tscn
-msgid "TAB"
+msgid "TabBar"
 msgstr ""
 
 #: scenes/InfoScreen.tscn
-msgid "[b]Lorem ipsum dolor[/b] sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+msgid "Lorem ipsum dolor\n"
 msgstr ""
 
 #: scenes/main.tscn
@@ -35,4 +39,16 @@ msgstr ""
 
 #: scenes/main.tscn
 msgid "tecnologia"
+msgstr ""
+
+#: scenes/main.tscn
+msgid "IT"
+msgstr ""
+
+#: scenes/main.tscn
+msgid "Italiano"
+msgstr ""
+
+#: scenes/main.tscn
+msgid "English"
 msgstr ""

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=18 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
@@ -28,6 +28,75 @@ shadow_to_opacity = true
 material = SubResource("StandardMaterial3D_o5qli")
 size = Vector2(100, 100)
 center_offset = Vector3(0, -2, 0)
+
+[sub_resource type="Animation" id="Animation_ya4ey"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sonaglio/Model:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sonaglio/Model:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sonaglio/Model:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.349066, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sonaglio/Model:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_choun"]
+resource_name = "shake"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sonaglio:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.349066), Vector3(0, 0, -0.349066), Vector3(0, 0, 0.349066), Vector3(0, 0, -0.349066), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ya4ey"]
+_data = {
+&"RESET": SubResource("Animation_ya4ey"),
+&"shake": SubResource("Animation_choun")
+}
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jyhfs")
@@ -77,7 +146,29 @@ layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
+[node name="HistoryButton" type="Button" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_tefeu")
+text = "CONTESTO STORICO"
+flat = true
+
+[node name="AnalysisButton" type="Button" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_tefeu")
+text = "DENTRO IL SONAGLIO"
+flat = true
+
+[node name="TechnologyButton" type="Button" parent="MainMenu/Labels/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_tefeu")
+text = "ESPLORAZIONE DIGITALE"
+flat = true
+
 [node name="History" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 7
 theme = ExtResource("3_tefeu")
@@ -91,6 +182,7 @@ script = ExtResource("4_o6xl0")
 filename = "history"
 
 [node name="Analysis" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 7
 theme = ExtResource("3_tefeu")
@@ -104,6 +196,7 @@ script = ExtResource("4_o6xl0")
 filename = "analysis"
 
 [node name="Technology" type="Label" parent="MainMenu/Labels/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 7
 theme = ExtResource("3_tefeu")
@@ -152,7 +245,9 @@ osc_address = "/quaternion"
 metadata/_custom_type_script = "uid://b4euyqc6jm12e"
 
 [node name="Camera3D" type="Camera3D" parent="SceneRoot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.5, 6)
+fov = 35.0
+size = 3.0
 
 [node name="Background" type="MeshInstance3D" parent="SceneRoot"]
 transform = Transform3D(9.84, 0, 0, 0, 9.84, 0, 0, 0, 9.84, 0, 0, -3)
@@ -186,4 +281,17 @@ light_color = Color(0.796004, 0.59055, 0.905169, 1)
 script = ExtResource("3_jyhfs")
 metadata/_custom_type_script = "uid://bfd5ad2y1xwdh"
 
+[node name="SonaglioAnimationPlayer" type="AnimationPlayer" parent="SceneRoot"]
+libraries = {
+&"": SubResource("AnimationLibrary_ya4ey")
+}
+
+[node name="SonaglioAnimationTimer" type="Timer" parent="SceneRoot"]
+wait_time = 10.0
+autostart = true
+
 [connection signal="pressed" from="MainMenu/Labels/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/VBoxContainer/HistoryButton" to="." method="_on_history_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/VBoxContainer/AnalysisButton" to="." method="_on_analysis_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/VBoxContainer/TechnologyButton" to="." method="_on_technology_button_pressed"]
+[connection signal="timeout" from="SceneRoot/SonaglioAnimationTimer" to="." method="_on_sonaglio_animation_timer_timeout"]

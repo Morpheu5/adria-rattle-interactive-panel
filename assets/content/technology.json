@@ -39,15 +39,50 @@ I suoni prodotti dal sonaglio sono stati registrati all’interno di una camera 
 					"content": {
 						"en": "[b]The electronic replica[/b]
 To create the electronic replica, the team of engineers placed a variety of electronic circuits and sensors inside a plastic shell that simulates the appearance of the original rattle. The electronic heart of this object is a microcontroller – a type of very compact and low-power computer – which interfaces with different types of sensors, including an accelerometer and a gyroscope that measure the way we move the replica rattle during use.
-The plastic container that we can hold in our hands was produced through the additive manufacturing process, better known as 3D printing, starting from the three-dimensional model reconstructed through diagnostic techniques such as Computed Axial Tomography (CAT, or CT) and structured light scanning.
-
-[b]The acoustic simulation[/b]
-The sounds produced by the electronic replica come from the sampling work carried out in the silent cabin, which were organized according to the type of movement that produces them. In this way, the microcontroller inside the shell recognizes the movement we perform while holding the object, and reproduce the most suitable sound, returning an experience as accurate as possible. To complete the simulation, the shell contains a small vibrating element, similar to those now contained in every modern cell phone, which helps to give the sensation of the movement of the sounding elements present in the original rattle.",
+The plastic container that we can hold in our hands was produced through the additive manufacturing process, better known as 3D printing, starting from the three-dimensional model reconstructed through diagnostic techniques such as Computed Axial Tomography (CAT, or CT) and structured light scanning.",
 						"it": "[b]La replica elettronica[/b]
 Per realizzare la replica elettronica, il team di ingegneri ha inserito una varietà di circuiti elettronici e sensori all’interno di un guscio di plastica che simula l’aspetto del sonaglio originale. Il cuore elettronico di questo oggetto è un microcontrollore – un tipo di computer molto compatto e a basso consumo – già predisposto per interfacciarsi con diverse tipologie di sensori, tra cui un accelerometro e un giroscopio che misurano il modo in cui muoviamo e orientiamo il sonaglio replica durante l’uso.
-Il contenitore in plastica che possiamo tenere in mano è stato prodotto attraverso il processo di manifattura additiva, meglio nota come stampa 3D, a partire dal modello tridimensionale ricostruito attraverso tecniche diagnostiche quali la Tomografia Computerizzata (TAC) e la scansione a luce strutturata.
-
-[b]La simulazione acustica[/b]
+Il contenitore in plastica che possiamo tenere in mano è stato prodotto attraverso il processo di manifattura additiva, meglio nota come stampa 3D, a partire dal modello tridimensionale ricostruito attraverso tecniche diagnostiche quali la Tomografia Computerizzata (TAC) e la scansione a luce strutturata."
+					},
+				},
+				{
+					"type": "carousel",
+					"content": [
+						{
+							"type": "image",
+							"content": "res://assets/content/images/digital_twin_1.jpg",
+							"thumbnail": "res://assets/content/images/digital_twin_1.jpg",
+							"caption": {
+								"en": "Development of the digital twin prototype\n(Centro di Sonologia Computazionale, Department of Information Engineering, University of Padua)",
+								"it": "Sviluppo del prototipo di digital twin\n(Centro di Sonologia Computazionale, Dipartimento di Ingegneria dell'Informazione, Università di Padova)"
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/sonaglio_breadboard.jpg",
+							"thumbnail": "res://assets/content/images/sonaglio_breadboard.jpg",
+							"caption": {
+								"en": "Initial prototype built using a \"breadboard\". Here we see the microcontroller (ESP32), the sensors, the speaker, and the battery.",
+								"it": "Prototipo iniziale realizzato su \"breadboard\". Si notano il microcontrollore (ESP32), i sensori, il diffusore sonoro, e la batteria."
+							}
+						},
+												{
+							"type": "image",
+							"content": "res://assets/content/images/sonaglio_prototype.jpg",
+							"thumbnail": "res://assets/content/images/sonaglio_prototype.jpg",
+							"caption": {
+								"en": "The initial prototype mounted inside a test shell.",
+								"it": "Il prototipo iniziale montato all'interno di un guscio provvisorio."
+							}
+						}
+					]
+				},
+				{
+					"type": "richtext",
+					"content": {
+						"en": "[b]The acoustic simulation[/b]
+The sounds produced by the electronic replica come from the sampling work carried out in the silent cabin, which were organized according to the type of movement that produces them. In this way, the microcontroller inside the shell recognizes the movement we perform while holding the object, and reproduce the most suitable sound, returning an experience as accurate as possible. To complete the simulation, the shell contains a small vibrating element, similar to those now contained in every modern cell phone, which helps to give the sensation of the movement of the sounding elements present in the original rattle.",
+						"it": "[b]La simulazione acustica[/b]
 I suoni prodotti dalla replica elettronica provengono dal lavoro di campionamento effettuato in camera silente, che sono stati organizzati a seconda del tipo di movimento che li produce. In questo modo, il microcontrollore all’interno del guscio può, usando le informazioni provenienti dai vari sensori, riconoscere il movimento che eseguiamo tenendo in mano l’oggetto, e riprodurre il suono più adatto, restituendo un’esperienza quanto più accurata possibile. Per completare la simulazione, il guscio contiene un piccolo elemento vibrante, simile a quelli contenuti ormai in ogni telefono cellulare moderno, che contribuisce a dare la sensazione del movimento degli elementi sonanti presenti nel sonaglio originale."
 					}
 				}
