@@ -54,11 +54,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 			menu_visible = false
 			interactable = true
+			$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
 		else:
 			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 			menu_visible = true
 			interactable = false
+			$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
 
 
 func _on_info_screen_dismiss():
