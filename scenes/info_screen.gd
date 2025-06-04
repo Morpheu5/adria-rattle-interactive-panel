@@ -16,6 +16,7 @@ const big_carousel = preload("res://scenes/BigCarousel.tscn")
 const play_icon = preload("res://assets/ui/right.png")
 const pause_icon = preload("res://assets/ui/pause.png")
 const rewind_icon = preload("res://assets/ui/rewind.png")
+const larger_icon = preload("res://assets/ui/larger.png")
 
 signal dismiss
 
@@ -37,8 +38,6 @@ func _configure_info_screen(data: Variant):
 	
 	# Clear tab bar
 	var tab_container = $ColorRect/MarginContainer/VBoxContainer/TabContainer as TabContainer
-	tab_container.theme = custom_theme
-	tab_container.tab_alignment = TabBar.ALIGNMENT_CENTER
 	for child in tab_container.get_children():
 		tab_container.remove_child(child)
 		child.queue_free()
@@ -115,6 +114,13 @@ func _configure_info_screen(data: Variant):
 					controls_container.add_theme_constant_override("separation", 0)
 					var play_button = Button.new()
 					
+					var big_play = TextureRect.new()
+					big_play.texture = load("res://assets/ui/big_play.png")
+					big_play.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+					big_play.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+					big_play.modulate = Color(1,1,1,0.666)
+					big_play.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 					var video_player = VideoStreamPlayer.new()
 					video_margin_container.add_child(video_player)
 					video_player.stream = load(content_block["content"])
@@ -123,25 +129,27 @@ func _configure_info_screen(data: Variant):
 					video_player.loop = true
 					video_player.mouse_force_pass_scroll_events = true
 					video_player.mouse_filter = Control.MOUSE_FILTER_PASS
-					video_player.gui_input.connect(_on_video_player_pressed.bind(video_player, play_button))
+					video_player.gui_input.connect(_on_video_player_pressed.bind(video_player, play_button, big_play))
 					vbox_container.add_child(video_margin_container)
+					
+					video_margin_container.add_child(big_play)
 
 					var stylebox = StyleBoxFlat.new()
 					stylebox.bg_color = Color(0,0,0,0.8)
 					play_button.icon = play_icon
-					play_button.pressed.connect(_on_play_button_pressed.bind(video_player, play_button))
+					play_button.pressed.connect(_on_play_button_pressed.bind(video_player, play_button, big_play))
 					play_button.add_theme_stylebox_override("normal", stylebox)
 					play_button.add_theme_stylebox_override("hover", stylebox)
 					var rewind_button = Button.new()
 					rewind_button.icon = rewind_icon
-					rewind_button.pressed.connect(_on_rewind_button_pressed.bind(video_player, play_button))
+					rewind_button.pressed.connect(_on_rewind_button_pressed.bind(video_player, play_button, big_play))
 					rewind_button.add_theme_stylebox_override("normal", stylebox)
 					rewind_button.add_theme_stylebox_override("hover", stylebox)
 
 					controls_container.add_child(rewind_button)
-					controls_container.add_child(play_button)
+					#controls_container.add_child(play_button)
 					video_margin_container.add_child(controls_container)
-					
+
 					var caption = Label.new()
 					caption.text = content_block["caption"][lang]
 					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -169,6 +177,9 @@ func _configure_info_screen(data: Variant):
 						image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
 						carousel.add_child(image)
+						var larger = TextureRect.new()
+						larger.texture = larger_icon
+						image.add_child(larger)
 					vbox_container.add_child(carousel_container)
 			var spacer = Control.new()
 			spacer.custom_minimum_size = Vector2(0, 32)
@@ -186,31 +197,36 @@ func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images:
 		c.captions = captions
 		add_child(c)
 
-func _on_play_button_pressed(video_player: VideoStreamPlayer, play_button: Button):
+func _on_play_button_pressed(video_player: VideoStreamPlayer, play_button: Button, big_play: TextureRect):
 	if video_player.is_paused() or !video_player.is_playing():
 		play_button.icon = pause_icon
 		video_player.set_paused(false)
 		if video_player.stream_position == 0.0:
 			video_player.play()
+		big_play.visible = false
 	else:
 		play_button.icon = play_icon
 		video_player.set_paused(true)
+		big_play.visible = true
 
-func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer, play_button: Button):
+func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer, play_button: Button, big_play: TextureRect):
 	if event is InputEventMouseButton and event.is_released() and !event.is_canceled() and !drag:
 		if video_player.is_paused() or !video_player.is_playing():
 			play_button.icon = pause_icon
 			video_player.set_paused(false)
 			if video_player.stream_position == 0.0:
 				video_player.play()
+			big_play.visible = false
 		else:
 			play_button.icon = play_icon
 			video_player.set_paused(true)
+			big_play.visible = true
 
-func _on_rewind_button_pressed(video_player: VideoStreamPlayer, play_button: Button):
+func _on_rewind_button_pressed(video_player: VideoStreamPlayer, play_button: Button, big_play: TextureRect):
 	video_player.stop()
 	video_player.stream_position = 0.0
 	play_button.icon = play_icon
+	big_play.visible = true
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():

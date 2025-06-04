@@ -62,8 +62,8 @@
 				{
 					"type": "richtext",
 					"content": {
-						"en": "The rattle (IG 12929), in fine suede-colored ceramic, has a rounded and hollow shape, and is decorated with a dark paint tending towards red. Inside there are four small terracotta spheres: when shaken, it produces a light and rhythmic sound. A similar object was found in the necropolis of Spina, in a tomb perhaps belonging to an adolescent, where the rattle could have been linked to the game of ball and pre-nuptial rites, a symbol of the passage to adulthood in female contexts. In the case of Adria, however, the rattle was placed in a child's tomb, probably male. Here its meaning seems more linked to the everyday world of childhood, as a simple play object, even if it retains a symbolic value linked to affection and protection. The funerary context itself is particularly interesting: the grave goods, in fact, combine Etruscan, Celtic and Hellenistic elements, testifying to the coexistence of different cultures in Adria in the Hellenistic age. In this context, the rattle also becomes an expression of a multicultural identity, a reflection of a world in dialogue between different traditions.",
-						"it": "Il sonaglio (IG 12929), in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico. Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi, celtici ed ellenistici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
+						"en": "The rattle (IG 12929), in fine suede-colored ceramic, has a rounded and hollow shape, and is decorated with a dark paint tending towards red. Inside there are four small terracotta spheres: when shaken, it produces a light and rhythmic sound.",
+						"it": "Il sonaglio (IG 12929), in ceramica fine color camoscio, ha una forma tondeggiante e cava, ed è decorato con una vernice scura tendente al rosso. Al suo interno ci sono quattro piccole sfere in terracotta: quando viene scosso, produce un suono leggero e ritmico."
 					}
 				},
 				{
@@ -88,6 +88,13 @@
 							}
 						}
 					]
+				},
+				{
+					"type": "richtext",
+					"content": {
+						"en": "A similar object was found in the necropolis of Spina, in a tomb perhaps belonging to an adolescent, where the rattle could have been linked to the game of ball and pre-nuptial rites, a symbol of the passage to adulthood in female contexts. In the case of Adria, however, the rattle was placed in a child's tomb, probably male. Here its meaning seems more linked to the everyday world of childhood, as a simple play object, even if it retains a symbolic value linked to affection and protection. The funerary context itself is particularly interesting: the grave goods, in fact, combine Etruscan and Celtic elements, testifying to the coexistence of different cultures in Adria in the Hellenistic age. In this context, the rattle also becomes an expression of a multicultural identity, a reflection of a world in dialogue between different traditions.",
+						"it": "Un oggetto simile è stato ritrovato nella necropoli di Spina, in una tomba forse appartenente a un’adolescente, dove il sonaglio potrebbe essere stato legato al gioco della palla e a riti pre-nuziali, simbolo del passaggio all’età adulta in contesti femminili. Nel caso di Adria, invece, il sonaglio è stato deposto in una tomba infantile, probabilmente maschile. Qui il suo significato sembra più legato al mondo quotidiano dell’infanzia, come semplice oggetto di gioco, anche se conserva una valenza simbolica legata all’affetto e alla protezione. Il contesto funerario stesso è particolarmente interessante: il corredo della tomba, infatti, unisce elementi etruschi e celtici, testimoniando la convivenza di culture diverse nella Adria di età ellenistica. In questo quadro, il sonaglio diventa anche espressione di un’identità multiculturale, riflesso di un mondo in dialogo tra tradizioni differenti."
+					}
 				}
 			]
 		}

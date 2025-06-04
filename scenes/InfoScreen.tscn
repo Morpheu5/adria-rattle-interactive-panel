@@ -60,6 +60,7 @@ layout_mode = 2
 [node name="BackButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/TitleBar"]
 layout_mode = 2
 theme = ExtResource("1_i6bd7")
+theme_override_colors/icon_normal_color = Color(0.693333, 0.64, 0.8, 1)
 icon = ExtResource("4_e6a6a")
 flat = true
 
@@ -67,7 +68,7 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_i6bd7")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 40
 text = "TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -87,27 +88,19 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_i6bd7")
+tab_alignment = 1
 current_tab = 0
 
-[node name="TabBar" type="TabBar" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer"]
 layout_mode = 2
-tab_alignment = 1
 metadata/_tab_index = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
 bbcode_enabled = true
@@ -115,59 +108,59 @@ text = "Lorem ipsum dolor
 "
 fit_content = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("5_e6a6a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("5_e6a6a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect3" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("5_e6a6a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect4" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("5_e6a6a")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("6_gog02")
 expand_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 800)
 layout_mode = 2
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_right = 120
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/MarginContainer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 stream = ExtResource("7_x7osw")
 autoplay = true
 expand = true
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/TabBar/ScrollContainer/VBoxContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="ColorRect/MarginContainer/VBoxContainer/TabContainer/ScrollContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
