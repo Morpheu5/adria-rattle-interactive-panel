@@ -129,6 +129,7 @@ grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 mouse_force_pass_scroll_events = false
+theme = ExtResource("3_tefeu")
 icon = ExtResource("5_85g3d")
 flat = true
 icon_alignment = 1
@@ -214,7 +215,31 @@ layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/Labels"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 204.0
+grow_vertical = 0
+
+[node name="ITButton" type="Button" parent="MainMenu/Labels/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("3_tefeu")
+text = "IT	"
+flat = true
+
+[node name="ENButton" type="Button" parent="MainMenu/Labels/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("3_tefeu")
+text = "EN"
+flat = true
+
 [node name="LanguageButton" type="MenuButton" parent="MainMenu/Labels"]
+visible = false
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 1
 anchors_preset = 2
@@ -294,4 +319,6 @@ autostart = true
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/HistoryButton" to="." method="_on_history_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/AnalysisButton" to="." method="_on_analysis_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/TechnologyButton" to="." method="_on_technology_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/HBoxContainer/ITButton" to="." method="_on_it_button_pressed"]
+[connection signal="pressed" from="MainMenu/Labels/HBoxContainer/ENButton" to="." method="_on_en_button_pressed"]
 [connection signal="timeout" from="SceneRoot/SonaglioAnimationTimer" to="." method="_on_sonaglio_animation_timer_timeout"]

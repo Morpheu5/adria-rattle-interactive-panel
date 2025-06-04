@@ -44,6 +44,9 @@ func _configure_info_screen(data: Variant):
 
 	# Load tabs
 	var tabs = data["tabs"].map(func(e): return e["title"][lang])
+	if tabs.size() <= 1:
+		tab_container.tabs_visible = false
+
 	for i in range(tabs.size()):
 		var tab = tabs[i]
 		var tab_data = data["tabs"][i]
@@ -93,6 +96,7 @@ func _configure_info_screen(data: Variant):
 					caption.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 					caption.add_theme_font_size_override("font_size", 32)
 					caption.autowrap_mode = TextServer.AUTOWRAP_WORD
+					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 					vbox_container.add_child(caption)
 				"video":
 					var video_margin_container = MarginContainer.new()
@@ -157,7 +161,8 @@ func _configure_info_screen(data: Variant):
 					caption.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 					caption.add_theme_font_size_override("font_size", 32)
 					caption.autowrap_mode = TextServer.AUTOWRAP_WORD
-
+					caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+					
 					vbox_container.add_child(caption)
 				"carousel":
 					var n = content_block["content"].size()

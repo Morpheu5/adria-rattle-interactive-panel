@@ -15,6 +15,9 @@ var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
 var current_info_screen
 var theme = preload("res://assets/base_theme.tres")
 
+@onready var it_button = $MainMenu/Labels/HBoxContainer/ITButton
+@onready var en_button = $MainMenu/Labels/HBoxContainer/ENButton
+
 func _ready() -> void:
 	TranslationServer.set_locale("it")
 	labels = [
@@ -27,6 +30,9 @@ func _ready() -> void:
 	menu_visible = true
 	interactable = false
 	$SceneRoot/Camera3D.position = Vector3(-1.2, 0.5, 6)
+	
+	it_button.modulate = Color(1,1,1,1)
+	en_button.modulate = Color(1,1,1,0.5)
 
 func is_distance_shorter(label, event, _min):
 	return label.get_screen_position().distance_to(event.position) < _min.get_screen_position().distance_to(event.position)
@@ -106,3 +112,14 @@ func _on_sonaglio_animation_timer_timeout() -> void:
 	var time = 10 + (randi() % 6)
 	print(time)
 	$SceneRoot/SonaglioAnimationTimer.start(time)
+
+
+### Ugly as heck but until Godot's ButtonGroups won't make sense, this is the easiest
+func _on_it_button_pressed() -> void:
+	TranslationServer.set_locale("it")
+	it_button.modulate = Color(1,1,1,1)
+	en_button.modulate = Color(1,1,1,0.5)
+func _on_en_button_pressed() -> void:
+	TranslationServer.set_locale("en")
+	it_button.modulate = Color(1,1,1,0.5)
+	en_button.modulate = Color(1,1,1,1)
