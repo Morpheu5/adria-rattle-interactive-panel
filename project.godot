@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Sonaglio di Adria RC1"
+config/name="Sonaglio di Adria"
+config/version="1.0.0-rc.1"
 run/main_scene="uid://bnywta3trmhm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://c2q3aykf1vvh4"
