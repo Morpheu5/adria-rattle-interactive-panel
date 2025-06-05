@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=15 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
@@ -9,17 +9,6 @@
 [ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="4_choun"]
 [ext_resource type="Script" uid="uid://df1vhc5k8uo2o" path="res://scenes/main_menu_label.gd" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bks86htqt51bj" path="res://assets/ui/information.png" id="5_85g3d"]
-[ext_resource type="Texture2D" uid="uid://dd63rq0o272ig" path="res://assets/content/images/a.jpg" id="7_tipki"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85g3d"]
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_operator = 1
-emission_texture = ExtResource("7_tipki")
-
-[sub_resource type="QuadMesh" id="QuadMesh_o6xl0"]
-material = SubResource("StandardMaterial3D_85g3d")
-size = Vector2(1.667, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5qli"]
 shadow_to_opacity = true
@@ -273,11 +262,6 @@ metadata/_custom_type_script = "uid://b4euyqc6jm12e"
 transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.5, 6)
 fov = 35.0
 size = 3.0
-
-[node name="Background" type="MeshInstance3D" parent="SceneRoot"]
-transform = Transform3D(9.84, 0, 0, 0, 9.84, 0, 0, 0, 9.84, 0, 0, -3)
-visible = false
-mesh = SubResource("QuadMesh_o6xl0")
 
 [node name="ShadowCatcher" type="MeshInstance3D" parent="SceneRoot"]
 mesh = SubResource("PlaneMesh_0wfyh")
