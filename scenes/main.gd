@@ -56,12 +56,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		#load_info_screen(labels[i].filename)
 	if (event is InputEventKey) and (event.keycode == KEY_I) and event.is_pressed():
 		if menu_visible:
-			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
+			var menu_tween = create_tween()
+			menu_tween.tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
+			menu_tween.tween_callback(func (): $MainMenu/Labels.visible = false)
 			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 			menu_visible = false
 			interactable = true
 			$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
 		else:
+			$MainMenu/Labels.visible = true
 			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 			menu_visible = true
