@@ -33,6 +33,9 @@ func _ready() -> void:
 	it_button.modulate = Color(1,1,1,1)
 	en_button.modulate = Color(1,1,1,0.5)
 	
+	$PickupOSCReceiver.picked_up.connect(_rattle_pick_up)
+	$PickupOSCReceiver.put_down.connect(_rattle_put_down)
+	
 	GodotLogger.info("Ready.")
 
 func is_distance_shorter(label, event, _min):
@@ -52,28 +55,32 @@ func load_info_screen(filename: String) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	#if (event is InputEventScreenTouch or event is InputEventMouseButton) and not event.is_pressed() and menu_visible and interactable:
-		#var closest = labels.reduce(func(_min, label): return label if is_distance_shorter(label, event, _min) else _min)
-		#var i = labels.find(closest)
-		#load_info_screen(labels[i].filename)
 	if (event is InputEventKey) and (event.keycode == KEY_I) and event.is_pressed():
 		if menu_visible:
-			var menu_tween = create_tween()
-			menu_tween.tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
-			menu_tween.tween_callback(func (): $MainMenu/Labels.visible = false)
-			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-			menu_visible = false
-			interactable = true
-			$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
-			GodotLogger.info("Rattle up.")
+			_rattle_pick_up()
 		else:
-			$MainMenu/Labels.visible = true
-			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
-			create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-			menu_visible = true
-			interactable = false
-			$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
-			GodotLogger.info("Rattle down.")
+			_rattle_put_down()
+
+
+func _rattle_pick_up():
+	var menu_tween = create_tween()
+	menu_tween.tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
+	menu_tween.tween_callback(func (): $MainMenu/Labels.visible = false)
+	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	menu_visible = false
+	interactable = true
+	$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
+	GodotLogger.info("Rattle up.")
+
+
+func _rattle_put_down():
+	$MainMenu/Labels.visible = true
+	create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
+	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	menu_visible = true
+	interactable = false
+	$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
+	GodotLogger.info("Rattle down.")
 
 
 func _on_info_screen_dismiss():
