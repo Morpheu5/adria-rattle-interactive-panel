@@ -33,6 +33,7 @@
 				},
 				{
 					"type": "carousel",
+					"id": "history-tomba-39",
 					"content": [
 						{
 							"type": "image",
@@ -68,6 +69,7 @@
 				},
 				{
 					"type": "carousel",
+					"id": "history-sonaglio",
 					"content": [
 						{
 							"type": "image",

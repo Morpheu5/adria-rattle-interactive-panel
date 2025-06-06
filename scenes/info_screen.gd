@@ -29,8 +29,9 @@ func _ready() -> void:
 	if error == OK:
 		var data = json.data
 		_configure_info_screen(data)
+		GodotLogger.info("Loading screen (%s)." % [filename])
 	else:
-		print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+		GodotLogger.error("JSON Parse Error: (%s) in (%s) at line (%s)" % [json.get_error_message(), json_string, json.get_error_line()])
 
 func _configure_info_screen(data: Variant):
 	# Load title
@@ -151,7 +152,6 @@ func _configure_info_screen(data: Variant):
 					rewind_button.add_theme_stylebox_override("hover", stylebox)
 
 					controls_container.add_child(rewind_button)
-					#controls_container.add_child(play_button)
 					video_margin_container.add_child(controls_container)
 
 					var caption = Label.new()
@@ -180,7 +180,7 @@ func _configure_info_screen(data: Variant):
 						image.size_flags_vertical = Control.SIZE_FILL
 						image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 						image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-						image.connect("gui_input", _on_image_pressed.bind(k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
+						image.connect("gui_input", _on_image_pressed.bind(content_block["id"], k, content_block["content"].map(func(c): return c["thumbnail"]), content_block["content"].map(func(c): return c["content"]), content_block["content"].map(func(c): return c["caption"][lang])))
 						carousel.add_child(image)
 						var larger = TextureRect.new()
 						larger.texture = larger_icon
@@ -191,11 +191,14 @@ func _configure_info_screen(data: Variant):
 			vbox_container.add_child(spacer)
 
 func _on_back_button_pressed() -> void:
+	GodotLogger.info("Info screen (%s) dismissed." % [filename])
 	emit_signal("dismiss")
 
-func _on_image_pressed(event: InputEvent, image_idx: int, thumbs: Array, images: Array, captions: Array) -> void:
+func _on_image_pressed(event: InputEvent, carousel_id: String, image_idx: int, thumbs: Array, images: Array, captions: Array) -> void:
 	if (event is InputEventMouseButton and event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.is_released() and !drag):
+		GodotLogger.info("Info screen (%s), carousel id (%s), image pressed (%d)" % [filename, images[image_idx]])
 		var c = big_carousel.instantiate()
+		c.carousel_id = carousel_id
 		c.image_idx = image_idx
 		c.thumbs = thumbs
 		c.images = images
@@ -209,10 +212,12 @@ func _on_play_button_pressed(video_player: VideoStreamPlayer, play_button: Butto
 		if video_player.stream_position == 0.0:
 			video_player.play()
 		big_play.visible = false
+		GodotLogger.info("Info screen (%s), play video (%s)" % [filename, video_player.stream.file])
 	else:
 		play_button.icon = play_icon
 		video_player.set_paused(true)
 		big_play.visible = true
+		GodotLogger.info("Info screen (%s), pause video (%s)" % [filename, video_player.stream.file])
 
 func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer, play_button: Button, big_play: TextureRect):
 	if event is InputEventMouseButton and event.is_released() and !event.is_canceled() and !drag:
@@ -222,16 +227,19 @@ func _on_video_player_pressed(event: InputEvent, video_player: VideoStreamPlayer
 			if video_player.stream_position == 0.0:
 				video_player.play()
 			big_play.visible = false
+			GodotLogger.info("Info screen (%s), play video (%s)" % [filename, video_player.stream.file])
 		else:
 			play_button.icon = play_icon
 			video_player.set_paused(true)
 			big_play.visible = true
+			GodotLogger.info("Info screen (%s), pause video (%s)" % [filename, video_player.stream.file])
 
 func _on_rewind_button_pressed(video_player: VideoStreamPlayer, play_button: Button, big_play: TextureRect):
 	video_player.stop()
 	video_player.stream_position = 0.0
 	play_button.icon = play_icon
 	big_play.visible = true
+	GodotLogger.info("Info screen (%s), rewind video (%s)" % [filename, video_player.stream.file])
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
@@ -244,10 +252,3 @@ func _input(event: InputEvent) -> void:
 		else:
 			drag = true
 		press_position = Vector2.ZERO
-
-
-
-#func _on_video_player_finished(video_player: VideoStreamPlayer):
-	#video_player.stop()
-	#video_player.set_paused(true)
-	#video_player.stream_position == 0.0

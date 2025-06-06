@@ -28,6 +28,15 @@ The sounds produced by the rattle were recorded inside a silent cabin, a control
 						"it": "[b]All'interno della camera silente[/b]
 I suoni prodotti dal sonaglio sono stati registrati all’interno di una camera silente, un ambiente controllato le cui pareti sono costruite in modo da ridurre drasticamente i rumori provenienti dall’esterno della cabina, e, allo stesso tempo, evitare il riverbero interno, ovvero la riflessione dei suoni in fase di registrazione contro le pareti della camera. Questo è un passaggio fondamentale per acquisire il suono “grezzo” proveniente dal sonaglio, ovvero il suono che raggiunge direttamente l’orecchio dell’ascoltatore, senza rumori e riverberi dovuti all’ambiente circostante. Particolare attenzione inoltre è stata riposta nel catturare i diversi tipi di suoni prodotti dal sonaglio dovuti alle varie orientazioni e modalità d’uso dello strumento, in particolare i suoni da impatto causati dall’urto tra le sferette all’interno e la cavità, e i suoni da rotolamento prodotti dal trascinamento delle sferette lungo il bordo della cavità stessa."
 					}
+				},
+				{
+					"type": "image",
+					"content": "res://assets/content/images/cabina_silente.jpg",
+					"thumbnail": "res://assets/content/images/cabina_silente.jpg",
+					"caption": {
+						"en": "The \"silent cabin\" in which the sounds of the rattle were recorded.\nCentro di Sonologia Computazionale, Dept. of Information Engineering, University of Padova",
+						"it": "La \"camera silente\" nella quale sono stati registrati i suoni del sonaglio.\nCentro di Sonologia Computazionale, Dipartimento di Ingegneria dell'informazione, Università di Padova",
+					}
 				}
 			]
 		},
@@ -47,6 +56,7 @@ Il contenitore in plastica che possiamo tenere in mano è stato prodotto attrave
 				},
 				{
 					"type": "carousel",
+					"id": "technology-modello-elettronico",
 					"content": [
 						{
 							"type": "image",

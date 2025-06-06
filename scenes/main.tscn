@@ -227,24 +227,6 @@ theme = ExtResource("3_tefeu")
 text = "EN"
 flat = true
 
-[node name="LanguageButton" type="MenuButton" parent="MainMenu/Labels"]
-visible = false
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -70.0
-offset_right = 48.0
-grow_vertical = 0
-theme = ExtResource("3_tefeu")
-text = "IT"
-item_count = 2
-popup/item_0/text = "Italiano"
-popup/item_0/id = 0
-popup/item_1/text = "English"
-popup/item_1/id = 1
-
 [node name="SceneRoot" type="Node3D" parent="."]
 
 [node name="Sonaglio" type="Node3D" parent="SceneRoot"]

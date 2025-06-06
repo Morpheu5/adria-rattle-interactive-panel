@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sonaglio di Adria"
-config/version="1.0.0-rc.1"
+config/version="1.0.0-rc.2"
 run/main_scene="uid://bnywta3trmhm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://c2q3aykf1vvh4"
@@ -20,6 +20,13 @@ config/icon="uid://v5ikinl41enm"
 [autoload]
 
 Globals="*res://scripts/Globals.gd"
+GodotLogger="*res://addons/logger/logger.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+file_logging/log_path="user://logs/sonaglio.log"
+file_logging/max_log_files=10000000
 
 [display]
 
@@ -33,7 +40,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godOSC/plugin.cfg")
+enabled=PackedStringArray("res://addons/godOSC/plugin.cfg", "res://addons/logger/plugin.cfg")
 
 [input_devices]
 

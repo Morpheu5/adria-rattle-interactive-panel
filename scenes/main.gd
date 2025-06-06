@@ -26,27 +26,29 @@ func _ready() -> void:
 		$MainMenu/Labels/VBoxContainer/Technology,
 	]
 	$MainMenu/Labels/VBoxContainer.modulate = Color(1.0, 1.0, 1.0, 1.0)
-	$MainMenu/Labels/LanguageButton.get_popup().id_pressed.connect(_on_language_pressed)
 	menu_visible = true
 	interactable = false
 	$SceneRoot/Camera3D.position = Vector3(-1.2, 0.5, 6)
 	
 	it_button.modulate = Color(1,1,1,1)
 	en_button.modulate = Color(1,1,1,0.5)
+	
+	GodotLogger.info("Ready.")
 
 func is_distance_shorter(label, event, _min):
 	return label.get_screen_position().distance_to(event.position) < _min.get_screen_position().distance_to(event.position)
 
 
 func load_info_screen(filename: String) -> void:
-		current_info_screen = info_screen_scene.instantiate()
-		current_info_screen.dismiss.connect(_on_info_screen_dismiss)
-		current_info_screen.modulate = Color(1.0, 1.0, 1.0, 0.0)
-		current_info_screen.filename = filename
-		$MainMenu.add_child(current_info_screen)
-		create_tween().tween_property(current_info_screen, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
-		interactable = false
-		info_screen_open = true
+	current_info_screen = info_screen_scene.instantiate()
+	current_info_screen.dismiss.connect(_on_info_screen_dismiss)
+	current_info_screen.modulate = Color(1.0, 1.0, 1.0, 0.0)
+	current_info_screen.filename = filename
+	$MainMenu.add_child(current_info_screen)
+	create_tween().tween_property(current_info_screen, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
+	interactable = false
+	info_screen_open = true
+	GodotLogger.info("Load info screen: %s" % [filename])
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -63,6 +65,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			menu_visible = false
 			interactable = true
 			$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
+			GodotLogger.info("Rattle up.")
 		else:
 			$MainMenu/Labels.visible = true
 			create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
@@ -70,6 +73,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			menu_visible = true
 			interactable = false
 			$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
+			GodotLogger.info("Rattle down.")
 
 
 func _on_info_screen_dismiss():
@@ -84,17 +88,6 @@ func _on_info_screen_dismiss():
 
 func _on_credits_button_pressed() -> void:
 	load_info_screen("credits")
-
-
-func _on_language_pressed(id: int) -> void:
-	match id:
-		0:
-			TranslationServer.set_locale("it")
-			$MainMenu/Labels/LanguageButton.text = "IT"
-		1:
-			TranslationServer.set_locale("en")
-			$MainMenu/Labels/LanguageButton.text = "EN"
-			
 
 
 func _on_history_button_pressed() -> void:
@@ -113,16 +106,17 @@ func _on_sonaglio_animation_timer_timeout() -> void:
 	if !interactable and !info_screen_open:
 		$SceneRoot/SonaglioAnimationPlayer.play("shake")
 	var time = 10 + (randi() % 6)
-	print(time)
 	$SceneRoot/SonaglioAnimationTimer.start(time)
 
 
 ### Ugly as heck but until Godot's ButtonGroups won't make sense, this is the easiest
 func _on_it_button_pressed() -> void:
+	GodotLogger.info("Language changed from (%s) to (it)" % [TranslationServer.get_locale()])
 	TranslationServer.set_locale("it")
 	it_button.modulate = Color(1,1,1,1)
 	en_button.modulate = Color(1,1,1,0.5)
 func _on_en_button_pressed() -> void:
+	GodotLogger.info("Language changed from (%s) to (en)" % [TranslationServer.get_locale()])
 	TranslationServer.set_locale("en")
 	it_button.modulate = Color(1,1,1,0.5)
 	en_button.modulate = Color(1,1,1,1)
