@@ -145,7 +145,7 @@ corner_radius_bottom_left = 3
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xouc1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tfge"]
-bg_color = Color(0.36, 0.24, 0.6, 0.501961)
+bg_color = Color(0.24, 0.24, 0.6, 0.501961)
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
@@ -169,7 +169,7 @@ expand_margin_right = 20.0
 expand_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0rl20"]
-bg_color = Color(0.21, 0.14, 0.35, 0.501961)
+bg_color = Color(0.14, 0.14, 0.35, 0.501961)
 
 [sub_resource type="ImageTexture" id="ImageTexture_jvko6"]
 
