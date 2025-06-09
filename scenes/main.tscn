@@ -273,7 +273,7 @@ spot_range = 20.0
 [node name="BottomLight" type="OmniLight3D" parent="SceneRoot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.0649, 0)
 layers = 512
-light_color = Color(0.5915, 0.5915, 0.91, 1)
+light_color = Color(0.5915, 0.644583, 0.91, 1)
 
 [node name="OSCServer" type="Node" parent="SceneRoot"]
 script = ExtResource("3_jyhfs")

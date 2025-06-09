@@ -60,7 +60,7 @@ layout_mode = 2
 [node name="BackButton" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/TitleBar"]
 layout_mode = 2
 theme = ExtResource("1_i6bd7")
-theme_override_colors/icon_normal_color = Color(0.693333, 0.64, 0.8, 1)
+theme_override_colors/icon_normal_color = Color(0.64, 0.693333, 0.8, 1)
 icon = ExtResource("4_e6a6a")
 flat = true
 
