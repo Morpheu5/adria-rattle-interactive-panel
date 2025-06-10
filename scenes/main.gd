@@ -10,6 +10,7 @@ var labels = []
 var menu_visible = true
 var interactable = false
 var info_screen_open = false
+var picked_up = false
 
 var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
 var current_info_screen
@@ -33,9 +34,6 @@ func _ready() -> void:
 	it_button.modulate = Color(1,1,1,1)
 	en_button.modulate = Color(1,1,1,0.5)
 	
-	$PickupOSCReceiver.picked_up.connect(_rattle_pick_up)
-	$PickupOSCReceiver.put_down.connect(_rattle_put_down)
-	
 	GodotLogger.info("Ready.")
 
 func is_distance_shorter(label, event, _min):
@@ -57,12 +55,12 @@ func load_info_screen(filename: String) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if (event is InputEventKey) and (event.keycode == KEY_I) and event.is_pressed():
 		if menu_visible:
-			_rattle_pick_up()
+			rattle_pick_up()
 		else:
-			_rattle_put_down()
+			rattle_put_down()
 
 
-func _rattle_pick_up():
+func rattle_pick_up():
 	var menu_tween = create_tween()
 	menu_tween.tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
 	menu_tween.tween_callback(func (): $MainMenu/Labels.visible = false)
@@ -70,16 +68,18 @@ func _rattle_pick_up():
 	menu_visible = false
 	interactable = true
 	$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
+	picked_up = true
 	GodotLogger.info("Rattle up.")
 
 
-func _rattle_put_down():
+func rattle_put_down():
 	$MainMenu/Labels.visible = true
 	create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 	menu_visible = true
 	interactable = false
 	$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
+	picked_up = false
 	GodotLogger.info("Rattle down.")
 
 
@@ -127,3 +127,40 @@ func _on_en_button_pressed() -> void:
 	TranslationServer.set_locale("en")
 	it_button.modulate = Color(1,1,1,0.5)
 	en_button.modulate = Color(1,1,1,1)
+
+
+func _on_osc_server_message_received(address: Variant, vals: Variant, time: Variant) -> void:
+	match address:
+		"/data/quaternion":
+			if vals != [] and picked_up:
+				handle_quaternion(vals)
+		"/data/gyroscope":
+			if vals != [] and picked_up:
+				handle_gyroscope(vals)
+		"/data/accelerometer":
+			if vals != [] and picked_up:
+				handle_accelerometer(vals)
+		"/message/picked_up":
+			rattle_pick_up()
+		"/message/put_down":
+			rattle_put_down()
+		"/message/alarm":
+			if picked_up:
+				handle_alarm(vals)
+
+func handle_quaternion(params):
+	var Q = Quaternion(params)
+	$SceneRoot/Sonaglio.quaternion = Q
+	GodotLogger.info("Quaternion: (%f, %f, %f, %f)" % params)
+
+func handle_gyroscope(params):
+	GodotLogger.info("Gyroscope: (%f, %f, %f)" % params)
+
+func handle_accelerometer(params):
+	GodotLogger.info("Accelerometer: (%f, %f, %f)" % params)
+
+func handle_alarm(play):
+	if play:
+		$AlarmPlayer.play()
+	else:
+		$AlarmPlayer.stop()

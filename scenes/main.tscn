@@ -1,15 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://bnywta3trmhm"]
+[gd_scene load_steps=15 format=3 uid="uid://bnywta3trmhm"]
 
 [ext_resource type="Script" uid="uid://b5nhhb0ldj028" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dttxary5fmy5u" path="res://assets/sonaglio/sonaglio.glb" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://b37td15uhhydn" path="res://scenes/pickup_osc_receiver.gd" id="2_choun"]
-[ext_resource type="Script" uid="uid://dx2oog2jjeofw" path="res://scripts/sonaglio_osc_receiver.gd" id="2_sugp2"]
 [ext_resource type="Environment" uid="uid://ctl3uwkad6pnb" path="res://assets/world_environment.tres" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://bfd5ad2y1xwdh" path="res://addons/godOSC/scripts/OSCServer.gd" id="3_jyhfs"]
 [ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="3_tefeu"]
 [ext_resource type="FontFile" uid="uid://jrwdsmabbmvw" path="res://assets/fonts/Averia Sans Libre/AveriaSansLibre-Bold.ttf" id="4_choun"]
 [ext_resource type="Script" uid="uid://df1vhc5k8uo2o" path="res://scenes/main_menu_label.gd" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://bks86htqt51bj" path="res://assets/ui/information.png" id="5_85g3d"]
+[ext_resource type="AudioStream" uid="uid://7mi1panqjx45" path="res://assets/sounds/alarm.wav" id="9_85g3d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5qli"]
 shadow_to_opacity = true
@@ -90,12 +89,6 @@ _data = {
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jyhfs")
-
-[node name="PickupOSCReceiver" type="Node" parent="." node_paths=PackedStringArray("target_server")]
-script = ExtResource("2_choun")
-target_server = NodePath("../SceneRoot/OSCServer")
-osc_address = "/"
-metadata/_custom_type_script = "uid://b4euyqc6jm12e"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_tbgi4")
@@ -241,12 +234,6 @@ flat = true
 [node name="Model" parent="SceneRoot/Sonaglio" instance=ExtResource("1_o5qli")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.9, 0)
 
-[node name="OSCReceiver" type="Node" parent="SceneRoot/Sonaglio" node_paths=PackedStringArray("target_server")]
-script = ExtResource("2_sugp2")
-target_server = NodePath("../../OSCServer")
-osc_address = "/quaternion"
-metadata/_custom_type_script = "uid://b4euyqc6jm12e"
-
 [node name="Camera3D" type="Camera3D" parent="SceneRoot"]
 transform = Transform3D(1, 0, 0, 0, 0.996195, 0.0871557, 0, -0.0871557, 0.996195, 0, 0.5, 6)
 fov = 35.0
@@ -288,10 +275,14 @@ libraries = {
 wait_time = 10.0
 autostart = true
 
+[node name="AlarmPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_85g3d")
+
 [connection signal="pressed" from="MainMenu/Labels/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/HistoryButton" to="." method="_on_history_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/AnalysisButton" to="." method="_on_analysis_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/VBoxContainer/TechnologyButton" to="." method="_on_technology_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/HBoxContainer/ITButton" to="." method="_on_it_button_pressed"]
 [connection signal="pressed" from="MainMenu/Labels/HBoxContainer/ENButton" to="." method="_on_en_button_pressed"]
+[connection signal="message_received" from="SceneRoot/OSCServer" to="." method="_on_osc_server_message_received"]
 [connection signal="timeout" from="SceneRoot/SonaglioAnimationTimer" to="." method="_on_sonaglio_animation_timer_timeout"]
