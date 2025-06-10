@@ -16,6 +16,8 @@ var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
 var current_info_screen
 var theme = preload("res://assets/base_theme.tres")
 
+var prev_quaternion_vals = [0.0, 0.0, 0.0, 1.0]
+
 @onready var it_button = $MainMenu/Labels/HBoxContainer/ITButton
 @onready var en_button = $MainMenu/Labels/HBoxContainer/ENButton
 
@@ -67,7 +69,6 @@ func rattle_pick_up():
 	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 	menu_visible = false
 	interactable = true
-	$SceneRoot/Sonaglio/OSCReceiver.picked_up = true
 	picked_up = true
 	GodotLogger.info("Rattle up.")
 
@@ -76,9 +77,9 @@ func rattle_put_down():
 	$MainMenu/Labels.visible = true
 	create_tween().tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.25)
 	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(-1.2, 0.5, 6), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	create_tween().tween_property($SceneRoot/Sonaglio, "quaternion", Quaternion(0, 0, 0, 1), 0.5)
 	menu_visible = true
 	interactable = false
-	$SceneRoot/Sonaglio/OSCReceiver.picked_up = false
 	picked_up = false
 	GodotLogger.info("Rattle down.")
 
@@ -149,7 +150,7 @@ func _on_osc_server_message_received(address: Variant, vals: Variant, time: Vari
 				handle_alarm(vals)
 
 func handle_quaternion(params):
-	var Q = Quaternion(params)
+	var Q = Quaternion(params[0], params[1], params[2], params[3])
 	$SceneRoot/Sonaglio.quaternion = Q
 	GodotLogger.info("Quaternion: (%f, %f, %f, %f)" % params)
 
