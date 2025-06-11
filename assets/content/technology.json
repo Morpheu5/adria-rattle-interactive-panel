@@ -13,7 +13,7 @@
 				},
 				{
 					"type": "video",
-					"content": "res://assets/content/videos/video_sonaglio.ogv",
+					"content": "res://assets/content/videos/video_sonaglio_good_audio.ogv",
 					"poster": "res://assets/content/videos/video_sonaglio_poster.jpg",
 					"caption": {
 						"en": "Audio recording performed at the Centro di Sonologia Computazionale, Department of Information Engineering, University of Padua.",
