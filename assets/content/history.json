@@ -46,11 +46,20 @@
 						},
 						{
 							"type": "image",
-							"content": "res://assets/content/images/tomba_39_scavo.jpg",
-							"thumbnail": "res://assets/content/images/tomba_39_scavo_thumb.jpg",
+							"content": "res://assets/content/images/tomba_39_scavo_a.jpg",
+							"thumbnail": "res://assets/content/images/tomba_39_scavo_a.jpg",
 							"caption": {
 								"en": "Tomb 39 at the time of excavation.",
 								"it": "La tomba 39 nel momento dello scavo."
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/tomba_39_scavo_b.jpg",
+							"thumbnail": "res://assets/content/images/tomba_39_scavo_b.jpg",
+							"caption": {
+								"en": "Drawing of tomb 39 at the time of excavation.",
+								"it": "Disegno della tomba 39 al momento dello scavo."
 							}
 						}
 					]
