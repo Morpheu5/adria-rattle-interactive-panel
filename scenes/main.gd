@@ -12,6 +12,8 @@ var interactable = false
 var info_screen_open = false
 var picked_up = false
 
+var Q = Quaternion(0.0, 0.0, 0.0, 1.0)
+
 var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
 var current_info_screen
 var theme = preload("res://assets/base_theme.tres")
@@ -36,6 +38,8 @@ func _ready() -> void:
 	it_button.modulate = Color(1,1,1,1)
 	en_button.modulate = Color(1,1,1,0.5)
 	
+	Q = Quaternion(0.0, 0.0, 0.0, 1.0)
+	
 	GodotLogger.info("Ready.")
 
 func is_distance_shorter(label, event, _min):
@@ -54,6 +58,10 @@ func load_info_screen(filename: String) -> void:
 	GodotLogger.info("Load info screen: %s" % [filename])
 
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and !menu_visible:
+		rattle_put_down()
+
 func _unhandled_input(event: InputEvent) -> void:
 	if (event is InputEventKey) and (event.keycode == KEY_I) and event.is_pressed():
 		if menu_visible:
@@ -67,6 +75,7 @@ func rattle_pick_up():
 	menu_tween.tween_property($MainMenu/Labels, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.25)
 	menu_tween.tween_callback(func (): $MainMenu/Labels.visible = false)
 	create_tween().tween_property($SceneRoot/Camera3D, "position", Vector3(0, 0.5, 5), 0.5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+	create_tween().tween_property($SceneRoot/Sonaglio, "quaternion", Q, 0.5)
 	menu_visible = false
 	interactable = true
 	picked_up = true
@@ -150,7 +159,7 @@ func _on_osc_server_message_received(address: Variant, vals: Variant, time: Vari
 				handle_alarm(vals)
 
 func handle_quaternion(params):
-	var Q = Quaternion(params[0], params[1], params[2], params[3])
+	Q = Quaternion(params[0], params[1], params[2], params[3])
 	$SceneRoot/Sonaglio.quaternion = Q
 	GodotLogger.info("Quaternion: (%f, %f, %f, %f)" % params)
 
@@ -165,3 +174,7 @@ func handle_alarm(play):
 		$AlarmPlayer.play()
 	else:
 		$AlarmPlayer.stop()
+
+
+func _on_interaction_toggle_button_pressed() -> void:
+	rattle_pick_up()
