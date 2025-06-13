@@ -23,3 +23,5 @@ mono_crash.*.json
 
 # Blender versioning
 *.blend[0-9]*
+
+/certs/
