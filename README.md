@@ -5,7 +5,7 @@
 
 ## ✨ What it is
 This project drives the 32-inch touchscreen kiosk installed in the tombs gallery of the museum.
-Visitors can virtually **pick up, rotate, and shake** the electronic, 3D printed replica of an ancient ceramic rattle, hear its sound, browse excavation media, and read multilanguage insights -- all without touching the original artefact.
+Visitors can **pick up, rotate, and shake** the electronic, 3D printed replica of an ancient ceramic rattle, hear its sound, browse excavation media, and read multilanguage insights -- all without touching the original artefact.
 
 The project is developed using [Godot](https://godotengine.org/) 4.4.1.
 
