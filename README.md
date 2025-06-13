@@ -13,7 +13,7 @@ The project is developed using [Godot](https://godotengine.org/) 4.4.1.
 
 ## 📊 Data logging
 
-Basic anonymous metrics (interaction, navigation) are recorded in application logs and no identifying information are (nor can) be recorded.
+Basic anonymous metrics (interaction, navigation) are recorded in application logs and no identifying information are (nor can be) recorded.
 
 ---
 
