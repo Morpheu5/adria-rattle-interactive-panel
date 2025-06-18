@@ -93,13 +93,37 @@ Qui potrete vedere radiografie e immagini TAC che hanno svelato ciò che l’occ
 					}
 				},
 				{
-					"type": "image",
-					"content": "res://assets/content/images/rx_1.jpg",
-					"thumbnail": "res://assets/content/images/rx_1_thumb.jpg",
-					"caption": {
-						"en": "X-ray of the rattle: the black dot at the top is a 5 mm diameter steel sphere used to size the images\n(TMB S.P.A.)",
-						"it": "Radiografia del sonaglio: il punto nero in alto è una sfera di acciaio di diametro 5 mm usata come riferimento\n(TMB S.P.A.)"
-					}
+					"type": "carousel",
+					"id": "3d-model",
+					"content": [
+						{
+							"type": "image",
+							"content": "res://assets/content/images/rx_1.jpg",
+							"thumbnail": "res://assets/content/images/rx_1_thumb.jpg",
+							"caption": {
+								"en": "X-ray of the rattle: the black dot at the top is a 5 mm diameter steel sphere used to size the images\n(TMB S.P.A.)",
+								"it": "Radiografia del sonaglio: il punto nero in alto è una sfera di acciaio di diametro 5 mm usata come riferimento\n(TMB S.P.A.)"
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/volume-cutout-1.jpg",
+							"thumbnail": "res://assets/content/images/volume-cutout-1.jpg",
+							"caption": {
+								"en": "Section of the model resulting from the CT scan: you can see the four spheres that produce the sound.",
+								"it": "Sezione del modello risultante dalla TAC: si notano le quattro biglie che producono il suono."
+							}
+						},
+						{
+							"type": "image",
+							"content": "res://assets/content/images/volume-cutout-2.jpg",
+							"thumbnail": "res://assets/content/images/volume-cutout-2.jpg",
+							"caption": {
+								"en": "Section of the model resulting from the CT scan: you can see the closure on the upper part, much thinner than the rest of the shell.",
+								"it": "Sezione del modello risultante dalla TAC: si nota la chiusura sulla parte superiore, molto più sottile del resto del guscio."
+							}
+						}
+					]
 				}
 			]
 		}
