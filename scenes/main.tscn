@@ -315,3 +315,4 @@ stream = ExtResource("9_85g3d")
 [connection signal="pressed" from="MainMenu/Labels/HBoxContainer/ENButton" to="." method="_on_en_button_pressed"]
 [connection signal="message_received" from="SceneRoot/OSCServer" to="." method="_on_osc_server_message_received"]
 [connection signal="timeout" from="SceneRoot/SonaglioAnimationTimer" to="." method="_on_sonaglio_animation_timer_timeout"]
+[connection signal="finished" from="AlarmPlayer" to="." method="_on_alarm_player_finished"]

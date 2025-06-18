@@ -12,6 +12,8 @@ var interactable = false
 var info_screen_open = false
 var picked_up = false
 
+var play_alarm = false
+
 var Q = Quaternion(0.0, 0.0, 0.0, 1.0)
 
 var info_screen_scene = preload("res://scenes/InfoScreen.tscn")
@@ -156,7 +158,8 @@ func _on_osc_server_message_received(address: Variant, vals: Variant, time: Vari
 			rattle_put_down()
 		"/message/alarm":
 			if picked_up:
-				handle_alarm(vals)
+				play_alarm = vals
+				handle_alarm()
 
 func handle_quaternion(params):
 	Q = Quaternion(params[0], params[1], params[2], params[3])
@@ -169,8 +172,8 @@ func handle_gyroscope(params):
 func handle_accelerometer(params):
 	GodotLogger.info("Accelerometer: (%f, %f, %f)" % params)
 
-func handle_alarm(play):
-	if play:
+func handle_alarm():
+	if play_alarm:
 		$AlarmPlayer.play()
 	else:
 		$AlarmPlayer.stop()
@@ -178,3 +181,8 @@ func handle_alarm(play):
 
 func _on_interaction_toggle_button_pressed() -> void:
 	rattle_pick_up()
+
+
+func _on_alarm_player_finished() -> void:
+	if play_alarm:
+		$AlarmPlayer.play()
