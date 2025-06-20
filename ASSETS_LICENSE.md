@@ -52,17 +52,17 @@ License 2.0** and may have **additional or more restrictive terms**.
 
 ## Contributors
 
-- [Andrea Franceschini](https://andreafranceschini.org)
-- [Museo Archeologico Nazionale di Adria](https://museiveneto.cultura.gov.it/musei/museo-archeologico-nazionale-di-adria)
 - [Alberta Facchi](https://trasparenza.cultura.gov.it/index.php?id_oggetto=3&id_doc=16581)
-- [TMB SpA](https://www.tmbspa.com)
-- [Giulio Pitteri](https://www.dei.unipd.it/persona/2fca0180cd2027fcdf9833f21ff6084f)
-- [Paola Dessì](https://www.unipd.it/contatti/rubrica?checkout=cerca&detail=Y&key=298A994A400F749E384E485C707077F6&persona=DESSI%27&ruolo=1)
-- [Mario La Rosa](https://www.instagram.com/mariojomario)
-- [Laura Noviello](https://www.instagram.com/figliadelvesuvio)
+- [Andrea Franceschini](https://andreafranceschini.org)
 - [Anna Paola Fabbrocino](https://www.instagram.com/_imannie_/)
 - [Antonio Rodà](https://www.dei.unipd.it/~roda/)
+- [Giulio Pitteri](https://www.dei.unipd.it/persona/2fca0180cd2027fcdf9833f21ff6084f)
 - [Kenney](https://www.kenney.nl)
+- [Laura Noviello](https://www.instagram.com/figliadelvesuvio)
+- [Mario La Rosa](https://www.instagram.com/mariojomario)
+- [Museo Archeologico Nazionale di Adria](https://museiveneto.cultura.gov.it/musei/museo-archeologico-nazionale-di-adria)
+- [Paola Dessì](https://www.unipd.it/contatti/rubrica?checkout=cerca&detail=Y&key=298A994A400F749E384E485C707077F6&persona=DESSI%27&ruolo=1)
+- [TMB SpA](https://www.tmbspa.com)
 
 ---
 
