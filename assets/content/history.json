@@ -38,7 +38,7 @@
 						{
 							"type": "image",
 							"content": "res://assets/content/images/Fig_2 tomba.jpg",
-							"thumbnail": "res://assets/content/images/Fig_2 tomba_thumb.jpg",
+							"thumbnail": "res://assets/content/images/Fig_2 tomba.jpg",
 							"caption": {
 								"en": "The content of tomb no. 39 is visible in the display case to the right.",
 								"it": "Il corredo della tomba n. 39 è visibile nella vetrina a fianco."

@@ -3,10 +3,8 @@
 [ext_resource type="Script" uid="uid://d0r0fpftlfun1" path="res://scenes/big_carousel.gd" id="1_wamd2"]
 [ext_resource type="Texture2D" uid="uid://u4x6c264rr10" path="res://assets/ui/left.png" id="2_igyu6"]
 [ext_resource type="Texture2D" uid="uid://c7xwi5pj2rgpl" path="res://assets/ui/right.png" id="3_7mt3l"]
-[ext_resource type="Texture2D" uid="uid://ru0ce2lwv0mj" path="res://assets/content/images/b.jpg" id="3_daq26"]
 [ext_resource type="Texture2D" uid="uid://cpwly600w7mpr" path="res://assets/ui/cross.png" id="4_daq26"]
-[ext_resource type="Texture2D" uid="uid://dq1hxm1hbdv8c" path="res://assets/content/images/b_thumb.jpg" id="6_omqxi"]
-[ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://assets/base_theme.tres" id="6_pm5jp"]
+[ext_resource type="Theme" uid="uid://dpnb8nwq0o1ki" path="res://scenes/base_theme.tres" id="6_pm5jp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0431n"]
 content_margin_left = 32.0
@@ -27,9 +25,15 @@ shadow_color = Color(0, 0, 0, 0.752941)
 shadow_size = 64
 shadow_offset = Vector2(0, 8)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_daq26"]
+load_path = "res://.godot/imported/b.jpg-05283d17410e35f265f6e9deb350b022.ctex"
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pm5jp"]
 content_margin_top = 12.0
 content_margin_bottom = 18.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_omqxi"]
+load_path = "res://.godot/imported/b_thumb.jpg-d10720270be557602a46d1ecf3b7a64c.ctex"
 
 [node name="BigCarousel" type="PanelContainer"]
 anchors_preset = 15
@@ -73,7 +77,7 @@ flat = true
 [node name="Image" type="TextureRect" parent="BackgroundPanel/VBoxContainer/GalleryContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("3_daq26")
+texture = SubResource("CompressedTexture2D_daq26")
 expand_mode = 2
 stretch_mode = 5
 
@@ -123,7 +127,7 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="BackgroundPanel/VBoxContainer/ThumbsScroller/ThumbsContainer"]
 visible = false
 layout_mode = 2
-texture = ExtResource("6_omqxi")
+texture = SubResource("CompressedTexture2D_omqxi")
 expand_mode = 3
 
 [connection signal="pressed" from="BackgroundPanel/VBoxContainer/GalleryContainer/LeftButtons/LeftButton" to="." method="_on_left_button_pressed"]
