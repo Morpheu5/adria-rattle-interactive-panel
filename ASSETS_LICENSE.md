@@ -50,7 +50,7 @@ License 2.0** and may have **additional or more restrictive terms**.
       per un sistema disciplinare e metodologico integrato.-(Studia archaeologica
       0081-6299; 265), 169-176.
 
-## Contributors
+## 💪 Licensees
 
 - [Alberta Facchi](https://trasparenza.cultura.gov.it/index.php?id_oggetto=3&id_doc=16581)
 - [Andrea Franceschini](https://andreafranceschini.org)
